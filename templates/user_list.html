@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+<html>
+    <head></head>
+    <body>
+        {% block body %}
+        {% for singleuser in userD %}
+        <header> <H2>Message Feed Page</H2></header>
+        <main>
+            <article>
+                <div class="row">
+                    <div class="panel panel-default col-md-6">
+                        <div class= "col-md-4">
+                            <img src="{{ singleuser.profile_pic }}" class= "img-circle" width="150" height= "150">
+
+                        </div>
+                    <div class="col-md-4">
+                        <h4>
+                            <a href="/profile/{{ singleuser.id }}">{{ singleuser.username }}</a>
+                        </h4>
+                    </br>
+                        <b>{{ singleuser.location }}</b>
+                    </div>
+
+                </div>
+            </div>
+   
+        <li>{{ singleuser.email }}</li>
+        {%endfor%}
+     </article>
+        <aside id="sidebar_left">ASIDE</aside>
+        <aside id="sidebar_right">ASIDE</aside>
+    </main>
+    <footer class="footer">
+        <p> Skyfarm Education &copy;2018</p>
+    </footer>
+
+    {% endblock %}
+    </body>
+</html>

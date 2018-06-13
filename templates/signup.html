@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+  <head>
+    <title>BackPocket User Signup</title>
+  </head>
+  <body>
+    {% block body %}
+    <Header>
+      <div class="container">
+        <h2><center>Join BackPocket</center></h2>
+      </div>
+    </Header>
+      <main> 
+        <article>
+       
+      <div class="container-fluid">
+        
+        <div class="col-md-6">
+        <form class="form-signin">
+        <label for="inputName" class="sr-only">User Name</label>
+        <input type="username" name="username" id="username" class="form-control" placeholder="User Name" required autofocus>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+         
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
+      </form>
+    </div>
+      </div>
+      
+    </article>
+    <aside id="sidebar_left"></aside>
+    <aside id="sidebar_right"></aside>
+    </main>
+
+      <footer class="footer">
+        <p>&copy; Skyfarm Education (c)2018</p>
+      </footer>
+ 
+    </div>
+    {% endblock %}
+  </body>
+</html>

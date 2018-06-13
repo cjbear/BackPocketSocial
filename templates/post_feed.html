@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<html>
+    <head>
+    </head>
+
+    <body>
+        {% block body %}
+        <header> <H2>Message Feed Page</H2></header>
+        <main>
+            <article>
+
+       
+        {% for onePost in singlePost %}
+            <h3>{{ onePost.posted_by }}</h3>
+            <p>{{ onePost.post_content}}</p>
+        {% endfor %}
+
+    </article>
+        <aside id="sidebar_left">ASIDE</aside>
+        <aside id="sidebar_right">ASIDE</aside>
+    </main>
+    <footer class="footer">
+            <p>&copy; Skyfarm Education (c)2018</p>
+    </footer>
+        {% endblock %}
+    </body>
+</html>

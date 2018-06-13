@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+<html>
+
+    <head>
+    </head>
+    <body>
+        {% block body %}
+        <h1>Congratulations. You've got a BackPocket account.<h1>
+
+        <p>Below are suggestions for taking the next steps...</p>
+     
+            <div class="jumbotron">
+                <p class="lead"></p>
+                <p><a class="btn btn-lg btn-success" href="showSignUp" role="button">Start Your Journey</a>
+                </p>
+            </div>
+     
+            <div class="row marketing">
+                <div class="col-lg-6">
+                    <h4>Write your goals for your first year in college.</h4>
+                    <button id="btnSignUp" href="/fygoals" class="btn btn-lg btn-primary btn-block" type="button">Start Goals</button>
+     
+                    <h4>What are your barriers to success?</h4>
+                    <button id="btnSignUp" href="/barriers" class="btn btn-lg btn-primary btn-block" type="button">Identify Barriers</button>
+     
+                    <h4>Bucket List</h4>
+                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                </div>
+     
+                <div class="col-lg-6">
+                    <h4>Bucket List</h4>
+                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+     
+                    <h4>Bucket List</h4>
+                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+     
+                    <h4>Bucket List</h4>
+                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                </div>
+            </div>
+     
+            <footer class="footer">
+                <p> Skyfarm Education &copy;2018</p>
+            </footer>
+     
+        </div>
+
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% block body %}
+        <Header>
+            <h2><center>User Details</center></h2>
+        </Header>
+            <main> 
+                <article>
+        <form method="post" action= "add_user_details">
+            <label>Username: </label>
+            <input type="text" id="username" name="username">
+            <br>
+            <label>Profile Picture: </label>
+            <input type="text" id="profile_pic" name="profile_pic">
+            <br>
+            <label>Location:</label>
+            <input type="text" id="location" name="location">
+            <br>
+            <input type="hidden" id="pid" name="pid" value= "{{ now_user.id }}">
+            <input type = "submit" />
+        </form>
+        </article>
+        <aside id="sidebar_left">ASIDE</aside>
+        <aside id="sidebar_right">ASIDE</aside>
+        </main>
+        <footer class="footer">
+            <p>&copy; Skyfarm Education (c)2018</p>
+        </footer>
+        {% endblock %}
+    </body>
+</html>
