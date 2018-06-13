@@ -1,0 +1,575 @@
+2018-05-31 18:40:52.226 PDT [1645] LOG:  listening on IPv6 address "::1", port 3305
+2018-05-31 18:40:52.226 PDT [1645] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-05-31 18:40:52.227 PDT [1645] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-05-31 18:40:52.242 PDT [1646] LOG:  database system was shut down at 2018-05-31 18:40:52 PDT
+2018-05-31 18:40:52.252 PDT [1645] LOG:  database system is ready to accept connections
+2018-05-31 18:43:23.929 PDT [1913] FATAL:  role "cjbear" does not exist
+2018-05-31 18:43:24.965 PDT [1915] FATAL:  role "cjbear" does not exist
+2018-05-31 18:45:02.627 PDT [1927] FATAL:  role "cjbear" does not exist
+2018-05-31 18:48:52.782 PDT [2021] ERROR:  syntax error at or near ""/Applications/Postgres.app/Contents/Versions/10/bin/psql"" at character 1
+2018-05-31 18:48:52.782 PDT [2021] STATEMENT:  "/Applications/Postgres.app/Contents/Versions/10/bin/psql" -p3305 -d "christopherjohnson"
+	CREATE USER craig WITH PASSWORD 'Password';
+2018-05-31 18:49:57.422 PDT [2021] ERROR:  syntax error at or near "ROLECREATE" at character 8
+2018-05-31 18:49:57.422 PDT [2021] STATEMENT:  CREATE ROLECREATE USER cjbear WITH PASSWORD 'Oak@8126103';
+2018-05-31 18:50:34.064 PDT [2118] FATAL:  database "PostgresSocial" does not exist
+2018-05-31 18:50:34.164 PDT [2119] FATAL:  database "PostgresSocial" does not exist
+2018-05-31 18:50:52.412 PDT [2144] FATAL:  database "PostgresSocial" does not exist
+2018-05-31 18:50:52.501 PDT [2145] FATAL:  database "PostgresSocial" does not exist
+2018-05-31 18:50:57.583 PDT [2147] FATAL:  database "PostgresSocial" does not exist
+2018-05-31 18:50:57.644 PDT [2148] FATAL:  database "PostgresSocial" does not exist
+2018-05-31 18:50:59.297 PDT [2149] FATAL:  database "PostgresSocial" does not exist
+2018-05-31 18:50:59.347 PDT [2150] FATAL:  database "PostgresSocial" does not exist
+2018-06-01 05:52:17.439 PDT [1645] LOG:  received fast shutdown request
+2018-06-01 05:52:17.440 PDT [1645] LOG:  aborting any active transactions
+2018-06-01 05:52:17.442 PDT [1645] LOG:  worker process: logical replication launcher (PID 1652) exited with exit code 1
+2018-06-01 05:52:17.442 PDT [1647] LOG:  shutting down
+2018-06-01 05:52:17.453 PDT [1645] LOG:  database system is shut down
+2018-06-01 12:17:28.910 PDT [871] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-01 12:17:28.910 PDT [871] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-01 12:17:37.951 PDT [874] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-01 12:17:37.951 PDT [874] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-01 12:18:04.194 PDT [878] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-01 12:18:04.194 PDT [878] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-01 12:29:01.378 PDT [932] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-01 12:29:01.378 PDT [932] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-01 12:36:04.146 PDT [1079] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-01 12:36:04.146 PDT [1079] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-01 12:36:43.982 PDT [1165] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-01 12:36:43.982 PDT [1165] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-01 12:37:17.080 PDT [1278] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-01 12:37:17.080 PDT [1278] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-01 12:38:19.371 PDT [1285] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-01 12:38:19.371 PDT [1285] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-01 12:39:11.659 PDT [1314] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-01 12:39:11.659 PDT [1314] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-01 12:39:15.124 PDT [1318] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-01 12:39:15.124 PDT [1318] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-01 12:47:58.413 PDT [1773] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-01 12:47:58.413 PDT [1773] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-01 12:47:58.413 PDT [1773] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-01 12:47:58.435 PDT [1774] LOG:  database system was shut down at 2018-06-01 05:52:17 PDT
+2018-06-01 12:47:58.445 PDT [1773] LOG:  database system is ready to accept connections
+2018-06-01 13:29:55.115 PDT [2997] ERROR:  duplicate key value violates unique constraint "user_email_key"
+2018-06-01 13:29:55.115 PDT [2997] DETAIL:  Key (email)=(enzo@gmail.com) already exists.
+2018-06-01 13:29:55.115 PDT [2997] STATEMENT:  INSERT INTO "user" ("firstName", "lastName", email, password, active, confirmed_at) VALUES (NULL, NULL, 'enzo@gmail.com', 'cat123', true, NULL) RETURNING "user".id
+2018-06-01 13:42:24.765 PDT [3152] ERROR:  duplicate key value violates unique constraint "user_email_key"
+2018-06-01 13:42:24.765 PDT [3152] DETAIL:  Key (email)=(enzo@gmail.com) already exists.
+2018-06-01 13:42:24.765 PDT [3152] STATEMENT:  INSERT INTO "user" ("firstName", "lastName", email, password, active, confirmed_at) VALUES (NULL, NULL, 'enzo@gmail.com', 'cat123', true, NULL) RETURNING "user".id
+2018-06-02 12:27:49.311 PDT [1773] LOG:  received smart shutdown request
+2018-06-02 12:27:49.313 PDT [1773] LOG:  worker process: logical replication launcher (PID 1780) exited with exit code 1
+2018-06-02 12:27:49.314 PDT [1775] LOG:  shutting down
+2018-06-02 12:27:49.324 PDT [1773] LOG:  database system is shut down
+2018-06-02 14:31:03.903 PDT [454] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-02 14:31:03.903 PDT [454] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-02 22:38:20.830 PDT [418] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-02 22:38:20.830 PDT [418] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-03 09:16:37.010 PDT [446] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-03 09:16:37.010 PDT [446] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-03 09:42:00.445 PDT [900] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-03 09:42:00.445 PDT [900] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-03 09:42:05.959 PDT [903] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-03 09:42:05.959 PDT [903] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-03 09:42:34.724 PDT [908] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-03 09:42:34.724 PDT [908] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-03 09:43:08.183 PDT [913] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-03 09:43:08.183 PDT [913] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-03 09:46:24.650 PDT [1064] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-03 09:46:24.650 PDT [1064] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-03 09:46:32.999 PDT [1068] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-03 09:46:32.999 PDT [1068] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-03 09:51:11.330 PDT [1304] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-03 09:51:11.330 PDT [1304] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-03 14:48:40.700 PDT [456] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-03 14:48:40.700 PDT [456] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-03 20:48:14.826 PDT [445] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-03 20:48:14.826 PDT [445] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 10:35:54.795 PDT [519] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 10:35:54.795 PDT [519] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 10:55:38.769 PDT [1017] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 10:55:38.769 PDT [1017] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 10:55:45.348 PDT [1021] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 10:55:45.348 PDT [1021] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 10:55:59.548 PDT [1025] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 10:55:59.548 PDT [1025] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 10:59:15.413 PDT [1149] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 10:59:15.413 PDT [1149] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 11:00:31.706 PDT [1178] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 11:00:31.706 PDT [1178] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 11:01:10.091 PDT [1227] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 11:01:10.091 PDT [1227] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 11:03:38.464 PDT [1302] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 11:03:38.464 PDT [1302] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 11:03:57.947 PDT [1308] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 11:03:57.947 PDT [1308] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 11:08:23.090 PDT [1421] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 11:08:23.090 PDT [1421] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 11:09:40.446 PDT [1432] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 11:09:40.446 PDT [1432] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 11:12:09.690 PDT [1463] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-04 11:12:09.690 PDT [1463] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-04 11:12:09.691 PDT [1463] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-04 11:12:09.715 PDT [1464] LOG:  database system was shut down at 2018-06-02 12:27:49 PDT
+2018-06-04 11:12:09.727 PDT [1463] LOG:  database system is ready to accept connections
+2018-06-04 11:46:59.045 PDT [1463] LOG:  received smart shutdown request
+2018-06-04 11:46:59.047 PDT [1463] LOG:  worker process: logical replication launcher (PID 1470) exited with exit code 1
+2018-06-04 11:46:59.047 PDT [1465] LOG:  shutting down
+2018-06-04 11:46:59.055 PDT [1463] LOG:  database system is shut down
+2018-06-04 20:11:26.994 PDT [452] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 20:11:26.994 PDT [452] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 20:11:34.162 PDT [501] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 20:11:34.162 PDT [501] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 20:12:55.398 PDT [723] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 20:12:55.398 PDT [723] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 20:12:59.024 PDT [726] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 20:12:59.024 PDT [726] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-04 20:15:58.815 PDT [804] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-04 20:15:58.815 PDT [804] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-04 20:15:58.816 PDT [804] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-04 20:15:58.841 PDT [805] LOG:  database system was shut down at 2018-06-04 11:46:59 PDT
+2018-06-04 20:15:58.853 PDT [804] LOG:  database system is ready to accept connections
+2018-06-04 20:57:28.692 PDT [804] LOG:  received smart shutdown request
+2018-06-04 21:04:27.848 PDT [443] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-04 21:04:27.848 PDT [443] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-05 07:36:15.900 PDT [530] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-05 07:36:15.900 PDT [530] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-05 07:46:21.564 PDT [955] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-05 07:46:21.564 PDT [955] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-05 07:46:21.565 PDT [955] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-05 07:46:21.597 PDT [956] LOG:  database system was interrupted; last known up at 2018-06-04 20:20:58 PDT
+2018-06-05 07:46:21.665 PDT [956] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-05 07:46:21.671 PDT [956] LOG:  redo starts at 0/16DA140
+2018-06-05 07:46:21.671 PDT [956] LOG:  invalid record length at 0/16DA220: wanted 24, got 0
+2018-06-05 07:46:21.671 PDT [956] LOG:  redo done at 0/16DA1E8
+2018-06-05 07:46:21.686 PDT [955] LOG:  database system is ready to accept connections
+2018-06-05 10:54:10.959 PDT [955] LOG:  received smart shutdown request
+2018-06-05 10:54:10.960 PDT [955] LOG:  worker process: logical replication launcher (PID 962) exited with exit code 1
+2018-06-05 10:54:10.960 PDT [957] LOG:  shutting down
+2018-06-05 10:54:10.971 PDT [955] LOG:  database system is shut down
+2018-06-05 19:05:15.592 PDT [454] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-05 19:05:15.592 PDT [454] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-05 22:20:20.331 PDT [445] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-05 22:20:20.331 PDT [445] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-05 22:25:26.543 PDT [804] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-05 22:25:26.543 PDT [804] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-05 22:25:32.515 PDT [807] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-05 22:25:32.515 PDT [807] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-05 22:25:46.970 PDT [832] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-05 22:25:46.970 PDT [832] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-05 22:25:46.971 PDT [832] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-05 22:25:47.000 PDT [833] LOG:  database system was shut down at 2018-06-05 10:54:10 PDT
+2018-06-05 22:25:47.010 PDT [832] LOG:  database system is ready to accept connections
+2018-06-06 00:01:42.710 PDT [832] LOG:  received smart shutdown request
+2018-06-06 00:01:42.711 PDT [832] LOG:  worker process: logical replication launcher (PID 839) exited with exit code 1
+2018-06-06 00:01:42.711 PDT [834] LOG:  shutting down
+2018-06-06 00:01:42.721 PDT [832] LOG:  database system is shut down
+2018-06-06 07:25:03.009 PDT [458] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-06 07:25:03.009 PDT [458] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-06 07:46:57.779 PDT [920] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-06 07:46:57.779 PDT [920] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-06 07:47:16.239 PDT [968] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-06 07:47:16.239 PDT [968] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-06 07:47:16.240 PDT [968] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-06 07:47:16.271 PDT [969] LOG:  database system was shut down at 2018-06-06 00:01:42 PDT
+2018-06-06 07:47:16.285 PDT [968] LOG:  database system is ready to accept connections
+2018-06-06 08:14:53.141 PDT [1177] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 11:36:23.235 PDT [4283] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 11:37:15.825 PDT [4435] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 12:01:47.770 PDT [4466] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 12:09:26.677 PDT [5335] FATAL:  database "postgresql" does not exist
+2018-06-06 12:10:06.731 PDT [5340] FATAL:  database "PostgresSocial" does not exist
+2018-06-06 12:10:23.565 PDT [5342] FATAL:  database "PostgresSocial" does not exist
+2018-06-06 12:10:42.125 PDT [5344] ERROR:  role "admin" does not exist
+2018-06-06 12:10:42.125 PDT [5344] STATEMENT:  SET ROLE TO 'admin'
+2018-06-06 12:28:32.023 PDT [5623] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 12:34:39.374 PDT [5665] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 12:36:18.446 PDT [6041] ERROR:  column user.username does not exist at character 108
+2018-06-06 12:36:18.446 PDT [6041] STATEMENT:  SELECT "user".id AS user_id, "user"."firstName" AS "user_firstName", "user"."lastName" AS "user_lastName", "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".active AS user_active, "user".confirmed_at AS user_confirmed_at 
+	FROM "user" 
+	WHERE "user".id = '2' 
+	 LIMIT 1
+2018-06-06 12:37:44.272 PDT [6041] ERROR:  column user.username does not exist at character 108
+2018-06-06 12:37:44.272 PDT [6041] STATEMENT:  SELECT "user".id AS user_id, "user"."firstName" AS "user_firstName", "user"."lastName" AS "user_lastName", "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".active AS user_active, "user".confirmed_at AS user_confirmed_at 
+	FROM "user" 
+	WHERE "user".id = '2' 
+	 LIMIT 1
+2018-06-06 12:38:01.896 PDT [6084] ERROR:  column user.username does not exist at character 108
+2018-06-06 12:38:01.896 PDT [6084] STATEMENT:  SELECT "user".id AS user_id, "user"."firstName" AS "user_firstName", "user"."lastName" AS "user_lastName", "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".active AS user_active, "user".confirmed_at AS user_confirmed_at 
+	FROM "user" 
+	WHERE "user".id = '2' 
+	 LIMIT 1
+2018-06-06 12:38:04.890 PDT [6084] ERROR:  column user.username does not exist at character 108
+2018-06-06 12:38:04.890 PDT [6084] STATEMENT:  SELECT "user".id AS user_id, "user"."firstName" AS "user_firstName", "user"."lastName" AS "user_lastName", "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".active AS user_active, "user".confirmed_at AS user_confirmed_at 
+	FROM "user" 
+	WHERE "user".id = '2' 
+	 LIMIT 1
+2018-06-06 12:43:28.869 PDT [6277] ERROR:  column user.username does not exist at character 108
+2018-06-06 12:43:28.869 PDT [6277] STATEMENT:  SELECT "user".id AS user_id, "user"."firstName" AS "user_firstName", "user"."lastName" AS "user_lastName", "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".active AS user_active, "user".confirmed_at AS user_confirmed_at 
+	FROM "user" 
+	WHERE "user".id = '2' 
+	 LIMIT 1
+2018-06-06 12:43:32.533 PDT [6277] ERROR:  column user.username does not exist at character 108
+2018-06-06 12:43:32.533 PDT [6277] STATEMENT:  SELECT "user".id AS user_id, "user"."firstName" AS "user_firstName", "user"."lastName" AS "user_lastName", "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".active AS user_active, "user".confirmed_at AS user_confirmed_at 
+	FROM "user" 
+	WHERE "user".id = '2' 
+	 LIMIT 1
+2018-06-06 12:43:37.992 PDT [6279] ERROR:  column user.username does not exist at character 108
+2018-06-06 12:43:37.992 PDT [6279] STATEMENT:  SELECT "user".id AS user_id, "user"."firstName" AS "user_firstName", "user"."lastName" AS "user_lastName", "user".username AS user_username, "user".email AS user_email, "user".password AS user_password, "user".active AS user_active, "user".confirmed_at AS user_confirmed_at 
+	FROM "user" 
+	WHERE "user".id = '2' 
+	 LIMIT 1
+2018-06-06 12:46:23.055 PDT [5345] ERROR:  column "username" has pseudo-type cstring
+2018-06-06 12:46:23.055 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username cstring[] DEFAULT 100;
+	
+	
+2018-06-06 12:47:33.156 PDT [5345] ERROR:  syntax error at or near ";" at character 66
+2018-06-06 12:47:33.156 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char" DEFAULT ;
+	
+	
+2018-06-06 12:47:47.748 PDT [5345] ERROR:  column "char" does not exist
+2018-06-06 12:47:47.748 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char" DEFAULT char;
+	
+	
+2018-06-06 12:47:59.558 PDT [5345] ERROR:  syntax error at or near ";" at character 66
+2018-06-06 12:47:59.558 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char" DEFAULT ;
+	
+	
+2018-06-06 12:48:11.223 PDT [5345] ERROR:  column "char" does not exist
+2018-06-06 12:48:11.223 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char" DEFAULT char;
+	
+	
+2018-06-06 12:48:21.417 PDT [5345] ERROR:  cannot use column references in default expression
+2018-06-06 12:48:21.417 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char" DEFAULT username;
+	
+	
+2018-06-06 12:54:31.093 PDT [5345] ERROR:  column "char" does not exist
+2018-06-06 12:54:31.093 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT char;
+	
+	
+2018-06-06 12:54:46.011 PDT [5345] ERROR:  column "username" is of type "char"[] but default expression is of type integer
+2018-06-06 12:54:46.011 PDT [5345] HINT:  You will need to rewrite or cast the expression.
+2018-06-06 12:54:46.011 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT 200;
+	
+	
+2018-06-06 12:54:58.258 PDT [5345] ERROR:  column "string" does not exist
+2018-06-06 12:54:58.258 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT string;
+	
+	
+2018-06-06 12:55:10.086 PDT [5345] ERROR:  cannot use column references in default expression
+2018-06-06 12:55:10.086 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT email;
+	
+	
+2018-06-06 12:55:42.346 PDT [5345] ERROR:  column "yourname" does not exist
+2018-06-06 12:55:42.346 PDT [5345] HINT:  Perhaps you meant to reference the column "user.username".
+2018-06-06 12:55:42.346 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT yourname;
+	
+	
+2018-06-06 12:55:54.411 PDT [5345] ERROR:  syntax error at or near "." at character 72
+2018-06-06 12:55:54.411 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT user.username;
+	
+	
+2018-06-06 12:56:15.221 PDT [5345] ERROR:  syntax error at or near "]" at character 75
+2018-06-06 12:56:15.221 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT "char"[] DEFAULT user.username;
+	
+	
+2018-06-06 12:56:30.029 PDT [5345] ERROR:  syntax error at or near "]" at character 75
+2018-06-06 12:56:30.029 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT "char"[] DEFAULT user.username DEFAULT;
+	
+	
+2018-06-06 12:56:39.840 PDT [5345] ERROR:  syntax error at or near "]" at character 75
+2018-06-06 12:56:39.840 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT "char"[] DEFAULT "user.username" DEFAULT;
+	
+	
+2018-06-06 12:56:51.336 PDT [5345] ERROR:  syntax error at or near ";" at character 106
+2018-06-06 12:56:51.336 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT "char" DEFAULT "user.username" DEFAULT;
+	
+	
+2018-06-06 12:57:09.955 PDT [5345] ERROR:  multiple default values specified for column "username" of table "user" at character 75
+2018-06-06 12:57:09.955 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT "char" DEFAULT "user.username";
+	
+	
+2018-06-06 12:57:24.972 PDT [5345] ERROR:  syntax error at or near "." at character 85
+2018-06-06 12:57:24.972 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT char DEFAULT user.username;
+	
+	
+2018-06-06 12:57:41.400 PDT [5345] ERROR:  multiple default values specified for column "username" of table "user" at character 73
+2018-06-06 12:57:41.400 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT char DEFAULT "user.username";
+	
+	
+2018-06-06 12:57:53.829 PDT [5345] ERROR:  multiple default values specified for column "username" of table "user" at character 73
+2018-06-06 12:57:53.829 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT char DEFAULT "username";
+	
+	
+2018-06-06 12:58:02.988 PDT [5345] ERROR:  syntax error at or near ";" at character 77
+2018-06-06 12:58:02.988 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] NOT NULL DEFAULT ;
+	
+	
+2018-06-06 12:58:23.598 PDT [5345] ERROR:  syntax error at or near "]" at character 82
+2018-06-06 12:58:23.598 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] NOT NULL DEFAULT char[] DEFAULT;
+	
+	
+2018-06-06 12:58:30.572 PDT [5345] ERROR:  syntax error at or near "]" at character 73
+2018-06-06 12:58:30.572 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT char[] DEFAULT;
+	
+	
+2018-06-06 12:58:55.165 PDT [5345] ERROR:  syntax error at or near "]" at character 90
+2018-06-06 12:58:55.165 PDT [5345] STATEMENT:  ALTER TABLE public."user"
+	    ADD COLUMN username "char"[] DEFAULT "char[]" DEFAULT char[] DEFAULT;
+	
+	
+2018-06-06 13:03:54.227 PDT [6447] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:04:28.959 PDT [6488] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:07:38.736 PDT [6521] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:14:52.023 PDT [6557] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:19:10.783 PDT [6630] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:20:07.566 PDT [6688] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:21:41.769 PDT [6703] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:22:24.140 PDT [6735] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:24:59.404 PDT [6750] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:49:55.964 PDT [7025] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:50:59.745 PDT [7040] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:54:11.661 PDT [7053] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 13:58:21.587 PDT [7093] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 14:04:40.791 PDT [7150] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 14:05:36.431 PDT [7257] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 14:09:55.473 PDT [7270] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 14:12:29.756 PDT [7311] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 14:13:44.020 PDT [7375] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 14:32:50.543 PDT [7392] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-06 16:25:04.439 PDT [968] LOG:  received smart shutdown request
+2018-06-06 16:25:04.440 PDT [968] LOG:  worker process: logical replication launcher (PID 975) exited with exit code 1
+2018-06-06 16:44:11.413 PDT [451] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-06 16:44:11.413 PDT [451] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-06 16:47:45.956 PDT [899] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-06 16:47:45.956 PDT [899] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-06 16:48:04.221 PDT [946] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-06 16:48:04.222 PDT [946] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-06 16:48:04.222 PDT [946] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-06 16:48:04.249 PDT [947] LOG:  database system was interrupted; last known up at 2018-06-06 13:03:56 PDT
+2018-06-06 16:48:04.315 PDT [947] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-06 16:48:04.320 PDT [947] LOG:  redo starts at 0/16EEFB8
+2018-06-06 16:48:04.321 PDT [947] LOG:  invalid record length at 0/16EF098: wanted 24, got 0
+2018-06-06 16:48:04.321 PDT [947] LOG:  redo done at 0/16EF060
+2018-06-06 16:48:04.338 PDT [946] LOG:  database system is ready to accept connections
+2018-06-06 17:33:24.666 PDT [946] LOG:  received smart shutdown request
+2018-06-06 17:33:24.667 PDT [946] LOG:  worker process: logical replication launcher (PID 953) exited with exit code 1
+2018-06-06 17:33:24.667 PDT [948] LOG:  shutting down
+2018-06-06 17:33:24.674 PDT [946] LOG:  database system is shut down
+2018-06-06 17:34:53.152 PDT [441] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-06 17:34:53.152 PDT [441] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-06 17:46:33.360 PDT [848] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-06 17:46:33.360 PDT [848] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-06 17:46:34.787 PDT [851] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-06 17:46:34.787 PDT [851] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-06 17:46:47.106 PDT [876] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-06 17:46:47.106 PDT [876] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-06 17:46:47.107 PDT [876] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-06 17:46:47.132 PDT [877] LOG:  database system was shut down at 2018-06-06 17:33:24 PDT
+2018-06-06 17:46:47.142 PDT [876] LOG:  database system is ready to accept connections
+2018-06-06 17:48:59.130 PDT [876] LOG:  received smart shutdown request
+2018-06-06 17:48:59.131 PDT [876] LOG:  worker process: logical replication launcher (PID 883) exited with exit code 1
+2018-06-06 17:48:59.131 PDT [878] LOG:  shutting down
+2018-06-06 17:48:59.140 PDT [876] LOG:  database system is shut down
+2018-06-06 22:35:23.644 PDT [453] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-06 22:35:23.644 PDT [453] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-07 06:06:36.912 PDT [445] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-07 06:06:36.912 PDT [445] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-07 06:15:47.048 PDT [1255] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-07 06:15:47.048 PDT [1255] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-07 06:15:48.948 PDT [1258] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-07 06:15:48.948 PDT [1258] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-07 06:16:03.407 PDT [1283] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-07 06:16:03.407 PDT [1283] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-07 06:16:03.407 PDT [1283] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-07 06:16:03.431 PDT [1284] LOG:  database system was shut down at 2018-06-06 17:48:59 PDT
+2018-06-07 06:16:03.442 PDT [1283] LOG:  database system is ready to accept connections
+2018-06-07 07:50:17.016 PDT [1283] LOG:  received smart shutdown request
+2018-06-07 07:50:17.017 PDT [1283] LOG:  worker process: logical replication launcher (PID 1290) exited with exit code 1
+2018-06-07 07:50:17.017 PDT [1285] LOG:  shutting down
+2018-06-07 07:50:17.024 PDT [1283] LOG:  database system is shut down
+2018-06-07 12:14:17.687 PDT [513] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-07 12:14:17.687 PDT [513] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-07 12:34:13.723 PDT [1020] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-07 12:34:13.723 PDT [1020] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-07 12:34:35.481 PDT [1046] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-07 12:34:35.481 PDT [1046] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-07 12:34:35.482 PDT [1046] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-07 12:34:35.516 PDT [1047] LOG:  database system was shut down at 2018-06-07 07:50:17 PDT
+2018-06-07 12:34:35.528 PDT [1046] LOG:  database system is ready to accept connections
+2018-06-07 12:37:16.112 PDT [1046] LOG:  received smart shutdown request
+2018-06-07 12:37:16.113 PDT [1046] LOG:  worker process: logical replication launcher (PID 1053) exited with exit code 1
+2018-06-07 12:37:16.113 PDT [1048] LOG:  shutting down
+2018-06-07 12:37:16.121 PDT [1046] LOG:  database system is shut down
+2018-06-07 12:48:06.172 PDT [443] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-07 12:48:06.172 PDT [443] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-07 12:49:49.639 PDT [853] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-07 12:49:49.639 PDT [853] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-07 12:50:05.093 PDT [879] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-07 12:50:05.093 PDT [879] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-07 12:50:05.094 PDT [879] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-07 12:50:05.119 PDT [880] LOG:  database system was shut down at 2018-06-07 12:37:16 PDT
+2018-06-07 12:50:05.128 PDT [879] LOG:  database system is ready to accept connections
+2018-06-07 23:09:51.449 PDT [884] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2018-06-07 23:10:02.956 PDT [4680] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2018-06-07 23:10:07.622 PDT [879] LOG:  received smart shutdown request
+2018-06-07 23:10:07.623 PDT [879] LOG:  worker process: logical replication launcher (PID 886) exited with exit code 1
+2018-06-07 23:10:07.623 PDT [881] LOG:  shutting down
+2018-06-08 07:48:55.518 PDT [446] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-08 07:48:55.518 PDT [446] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-09 00:17:45.860 PDT [459] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-09 00:17:45.860 PDT [459] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-09 00:20:11.951 PDT [1021] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-09 00:20:11.951 PDT [1021] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-09 00:20:11.952 PDT [1021] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-09 00:20:11.977 PDT [1022] LOG:  database system shutdown was interrupted; last known up at 2018-06-07 23:10:07 PDT
+2018-06-09 00:20:12.036 PDT [1022] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-09 00:20:12.041 PDT [1022] LOG:  redo starts at 0/16EF4C0
+2018-06-09 00:20:12.042 PDT [1022] LOG:  invalid record length at 0/16EF5A0: wanted 24, got 0
+2018-06-09 00:20:12.042 PDT [1022] LOG:  redo done at 0/16EF568
+2018-06-09 00:20:12.055 PDT [1021] LOG:  database system is ready to accept connections
+2018-06-09 00:48:14.748 PDT [1021] LOG:  received smart shutdown request
+2018-06-09 00:48:14.749 PDT [1021] LOG:  worker process: logical replication launcher (PID 1028) exited with exit code 1
+2018-06-09 00:48:14.749 PDT [1023] LOG:  shutting down
+2018-06-09 00:48:14.756 PDT [1021] LOG:  database system is shut down
+2018-06-09 11:07:51.559 PDT [449] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-09 11:07:51.559 PDT [449] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-09 11:16:34.214 PDT [905] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-09 11:16:34.214 PDT [905] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-09 11:16:34.215 PDT [905] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-09 11:16:34.238 PDT [906] LOG:  database system was shut down at 2018-06-09 00:48:14 PDT
+2018-06-09 11:16:34.248 PDT [905] LOG:  database system is ready to accept connections
+2018-06-09 12:26:40.914 PDT [905] LOG:  received smart shutdown request
+2018-06-09 12:26:40.915 PDT [905] LOG:  worker process: logical replication launcher (PID 912) exited with exit code 1
+2018-06-09 12:26:40.915 PDT [907] LOG:  shutting down
+2018-06-09 12:26:40.923 PDT [905] LOG:  database system is shut down
+2018-06-09 17:01:16.081 PDT [522] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-09 17:01:16.081 PDT [522] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-09 17:02:13.130 PDT [754] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-09 17:02:13.130 PDT [754] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-09 17:02:13.131 PDT [754] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-09 17:02:13.157 PDT [755] LOG:  database system was shut down at 2018-06-09 12:26:40 PDT
+2018-06-09 17:02:13.166 PDT [754] LOG:  database system is ready to accept connections
+2018-06-09 21:04:57.067 PDT [4055] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-09 21:04:57.067 PDT [4055] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-09 21:06:10.162 PDT [754] LOG:  received fast shutdown request
+2018-06-09 21:06:10.163 PDT [754] LOG:  aborting any active transactions
+2018-06-09 21:06:10.164 PDT [754] LOG:  worker process: logical replication launcher (PID 761) exited with exit code 1
+2018-06-09 21:06:10.165 PDT [756] LOG:  shutting down
+2018-06-09 21:06:10.173 PDT [754] LOG:  database system is shut down
+2018-06-09 21:06:12.984 PDT [4292] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-09 21:06:12.984 PDT [4292] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-09 21:06:12.984 PDT [4292] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-09 21:06:12.998 PDT [4293] LOG:  database system was shut down at 2018-06-09 21:06:10 PDT
+2018-06-09 21:06:13.002 PDT [4292] LOG:  database system is ready to accept connections
+2018-06-10 00:52:52.291 PDT [4292] LOG:  received smart shutdown request
+2018-06-10 00:52:52.294 PDT [4292] LOG:  worker process: logical replication launcher (PID 4299) exited with exit code 1
+2018-06-10 00:52:52.294 PDT [4294] LOG:  shutting down
+2018-06-10 00:52:52.306 PDT [4292] LOG:  database system is shut down
+2018-06-10 08:43:09.106 PDT [464] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-10 08:43:09.106 PDT [464] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-10 08:50:05.731 PDT [834] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-10 08:50:05.731 PDT [834] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-10 08:50:07.298 PDT [837] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-10 08:50:07.298 PDT [837] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-10 08:50:25.090 PDT [914] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-10 08:50:25.090 PDT [914] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-10 08:50:25.091 PDT [914] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-10 08:50:25.115 PDT [915] LOG:  database system was shut down at 2018-06-10 00:52:52 PDT
+2018-06-10 08:50:25.124 PDT [914] LOG:  database system is ready to accept connections
+2018-06-10 14:12:07.201 PDT [5832] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-10 14:35:15.652 PDT [5944] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-10 14:41:50.021 PDT [6046] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-10 14:42:12.144 PDT [6112] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-10 14:54:55.598 PDT [6142] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-10 14:56:16.998 PDT [6253] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-10 15:01:12.516 PDT [6290] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-10 15:09:45.943 PDT [6342] LOG:  unexpected EOF on client connection with an open transaction
+2018-06-10 17:16:46.718 PDT [919] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2018-06-10 17:16:58.115 PDT [8012] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2018-06-10 17:17:10.984 PDT [914] LOG:  received smart shutdown request
+2018-06-10 17:17:10.985 PDT [914] LOG:  worker process: logical replication launcher (PID 921) exited with exit code 1
+2018-06-10 17:17:10.985 PDT [916] LOG:  shutting down
+2018-06-10 21:49:23.818 PDT [461] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-10 21:49:23.818 PDT [461] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-11 15:40:10.768 PDT [446] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-11 15:40:10.768 PDT [446] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-11 21:36:15.923 PDT [458] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-11 21:36:15.923 PDT [458] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-12 08:09:07.034 PDT [533] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-12 08:09:07.034 PDT [533] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-12 08:09:07.035 PDT [533] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-12 08:09:07.064 PDT [534] LOG:  database system was interrupted; last known up at 2018-06-10 16:45:34 PDT
+2018-06-12 08:09:07.321 PDT [534] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-12 08:09:07.326 PDT [534] LOG:  redo starts at 0/175AF78
+2018-06-12 08:09:07.326 PDT [534] LOG:  invalid record length at 0/175B058: wanted 24, got 0
+2018-06-12 08:09:07.326 PDT [534] LOG:  redo done at 0/175B020
+2018-06-12 08:09:07.348 PDT [533] LOG:  database system is ready to accept connections
+2018-06-12 13:02:09.720 PDT [4868] ERROR:  column post.body does not exist at character 299
+2018-06-12 13:02:09.720 PDT [4868] STATEMENT:  SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_posted_by AS anon_1_post_posted_by, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id, anon_1.post_language AS anon_1_post_language 
+	FROM (SELECT post.id AS post_id, post.body AS post_body, post.posted_by AS post_posted_by, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
+	FROM post JOIN followers ON followers.followed_id = post.user_id 
+	WHERE followers.follower_id = 6 UNION SELECT post.id AS post_id, post.body AS post_body, post.posted_by AS post_posted_by, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
+	FROM post 
+	WHERE post.user_id = 6) AS anon_1 ORDER BY anon_1.post_timestamp DESC 
+	 LIMIT 25 OFFSET 0
+2018-06-12 13:02:17.101 PDT [4868] ERROR:  column post.body does not exist at character 299
+2018-06-12 13:02:17.101 PDT [4868] STATEMENT:  SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_posted_by AS anon_1_post_posted_by, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id, anon_1.post_language AS anon_1_post_language 
+	FROM (SELECT post.id AS post_id, post.body AS post_body, post.posted_by AS post_posted_by, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
+	FROM post JOIN followers ON followers.followed_id = post.user_id 
+	WHERE followers.follower_id = 6 UNION SELECT post.id AS post_id, post.body AS post_body, post.posted_by AS post_posted_by, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
+	FROM post 
+	WHERE post.user_id = 6) AS anon_1 ORDER BY anon_1.post_timestamp DESC 
+	 LIMIT 25 OFFSET 0
+2018-06-12 13:02:18.278 PDT [4868] ERROR:  column post.body does not exist at character 299
+2018-06-12 13:02:18.278 PDT [4868] STATEMENT:  SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_posted_by AS anon_1_post_posted_by, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id, anon_1.post_language AS anon_1_post_language 
+	FROM (SELECT post.id AS post_id, post.body AS post_body, post.posted_by AS post_posted_by, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
+	FROM post JOIN followers ON followers.followed_id = post.user_id 
+	WHERE followers.follower_id = 6 UNION SELECT post.id AS post_id, post.body AS post_body, post.posted_by AS post_posted_by, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
+	FROM post 
+	WHERE post.user_id = 6) AS anon_1 ORDER BY anon_1.post_timestamp DESC 
+	 LIMIT 25 OFFSET 0
+2018-06-12 13:02:22.177 PDT [4868] ERROR:  column post.body does not exist at character 299
+2018-06-12 13:02:22.177 PDT [4868] STATEMENT:  SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_body AS anon_1_post_body, anon_1.post_posted_by AS anon_1_post_posted_by, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id, anon_1.post_language AS anon_1_post_language 
+	FROM (SELECT post.id AS post_id, post.body AS post_body, post.posted_by AS post_posted_by, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
+	FROM post JOIN followers ON followers.followed_id = post.user_id 
+	WHERE followers.follower_id = 6 UNION SELECT post.id AS post_id, post.body AS post_body, post.posted_by AS post_posted_by, post.timestamp AS post_timestamp, post.user_id AS post_user_id, post.language AS post_language 
+	FROM post 
+	WHERE post.user_id = 6) AS anon_1 ORDER BY anon_1.post_timestamp DESC 
+	 LIMIT 25 OFFSET 0
+2018-06-12 20:24:00.280 PDT [533] LOG:  received smart shutdown request
+2018-06-12 20:24:00.287 PDT [533] LOG:  worker process: logical replication launcher (PID 542) exited with exit code 1
+2018-06-12 20:24:00.288 PDT [537] LOG:  shutting down
+2018-06-12 22:16:28.765 PDT [449] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-12 22:16:28.765 PDT [449] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-13 01:14:11.295 PDT [449] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-13 01:14:11.295 PDT [449] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-13 01:22:43.055 PDT [471] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-13 01:22:43.055 PDT [471] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-13 01:27:49.677 PDT [447] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-13 01:27:49.677 PDT [447] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-13 09:43:11.252 PDT [520] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-13 09:43:11.252 PDT [520] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-13 10:04:25.378 PDT [465] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-13 10:04:25.378 PDT [465] DETAIL:  Permissions should be u=rwx (0700).
