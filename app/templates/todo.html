@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+<head>
+
+    </head>
+    <body>
+     
+        {% block app_content %}
+        <h1>{{ _('Hi, %(username)s!', username=current_user.username) }}</h1>
+        {% if form %}
+        {{ wtf.quick_form(form) }}
+        <br>
+        {% endif %}
+        <h2>Welcome to Your To Do List</h2>
+
+        <div class="container">
+            <h3>These are your tasks for today.</h3>
+            <table class="Table">
+                <tr>
+                    <th>Task Name</th>
+                    <th>Due Date</th>
+                    <th>Action</th>
+                </tr>
+                <tbody>
+                        {% if task_list %}
+                        {% for task in task_list %}
+                        <tr class="active">
+                            <td><a href = #>{{task.task_name}}</a></td>
+                            <td>{{task.due_date}}</td>
+                            <td><button type="submit" class="btn btn-success">Done</buton></button><td>
+                        </tr>
+                       
+                        {% endfor %}
+                        {% else %}
+                        {% endif %} 
+                </tbody>
+            </table>
+
+            
+        </div>
+        {% endblock %}
+    </body>
+
+</html>
+
+
+
+

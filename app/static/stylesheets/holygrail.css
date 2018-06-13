@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  main{
+    display: flex;
+    flex-basis: 800px;
+   }
+  
+  header, footer{
+    flex-basis: 100px;
+  }
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  order: 0;
+  
+  }
+    
+  nav {
+    flex-basis: 20%;
+    order: -1;
+    flex-grow: 1;
+  }
+
+  #sidebar_left {
+    flex-basis: 20%;
+    order: 2;
+    flex-grow: 1;
+
+  }
+
+  article {
+    flex-basis: 60%;
+    background: white;
+    order: 3;
+    flex-grow: 3;
+  }
+
+  #sidebar_right {
+    flex-basis: 20%;
+    order: 4;
+    flex-grow: 1;
+ 
+  }
+
+  a {
+    text-decoration: none;
+    color:rgb(39, 36, 36);
+  }
+  
+      /* We rely on source order for mobile-first approach
+   * in this case:
+   * 1. header
+   * 2. article
+   * 3. aside 1
+   * 4. aside 2
+   * 5. footer
+   */
+  
+      /* Medium screens */
+  @media all and (max-width: 640px) {
+    /* We tell both sidebars to share a row */
+    main {
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .main   { order: 1; }
+    .nav    { order: 2; }
+    .aside  { order: 3; }
+    .footer { order: 4; }
+  }
+    /* Large screens */
+  @media all and (min-width: 800px) {
+    .main   { flex: 2 0px; }
+    .main   { order: 1; }
+    .nav    { order: 0; }
+    .aside  { order: 3; }
+    .footer { order: 4; }
+  }

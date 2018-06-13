@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+<html>  
+    <head>
+
+    </head>
+    
+    <body>
+        {% block body %}
+        <header> <h1>Welcome {{ now_user.firstName }} </h1></header>
+       <main>
+           <article>
+                <form method = "post" action= "add_post">
+                    <label>Enter your post message here.</label>
+                    <input id="pcontent" type = "text" name = "pcontent"/>
+                    <input id="pemail" type = "hidden" name = "pemail" value= "{{ now_user.email }}"/>
+                    <input type = "submit"/>
+                </form>
+           </article>
+           <aside id="sidebar_left">ASIDE</aside>
+           <aside id="sidebar_right">ASIDE</aside>
+
+       </main>
+       <footer class="footer">
+            <p>&copy; Skyfarm Education (c)2018</p>
+        </footer>
+
+        {% endblock %}
+    </body>
+
+
+</html>
