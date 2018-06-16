@@ -5,10 +5,10 @@ from flask_login import current_user, login_required
 from flask_security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin, login_required
 from flask_sqlalchemy import SQLAlchemy
 from flask_babel import _, get_locale
-from guess_language import guess_language
+#from guess_language import guess_language
 from app import db
-from app.main.forms import EditProfileForm, PostForm, SearchForm
-from app.models import User, Post
+from app.main.forms import EditProfileForm, SearchForm
+from app.models import User, Post, Todotask
 from app.translate import translate
 from app.main import bp
 
@@ -20,68 +20,10 @@ def before_request():
         g.search_form = SearchForm()
     g.locale = str(get_locale())
 
-@bp.route('/todo', methods=['GET', 'POST'])
-def todo():
-    form = TaskForm()
-    if form.validate_on_submit():
-        task = Todotask(todo_name=form.post.data, due_date=form.task.due_date, todo_priority=form.task.priority, author=current_user)
-        db.session.add(task)
-        db.session.commit()
-        flash(_('Your post is now live!'))
-        return redirect(url_for('main.todo'))
-    page = request.args.get('page', 1, type=int)
-    tasks = current_user.followed_posts().paginate(
-        page, current_app.config['TASKS_PER_PAGE'], False)
-    next_url = url_for('main.todo', page=tasks.next_num) \
-        if posts.has_next else None
-    prev_url = url_for('main.todo', page=tasks.prev_num) \
-        if tasks.has_prev else None
-    return render_template('todo.html', title=_('Todo List'), form=form,
-                           posts=posts.items, next_url=next_url,
-                           prev_url=prev_url)
-    return render_template('todo.html', title='Todo List')
-
-
-@bp.route('/reflect', methods=['GET', 'POST'])
-@login_required
-def reflect():
-    form = PostForm()
-    if form.validate_on_submit():
-        language = guess_language(form.post.data)
-        if language == 'UNKNOWN' or len(language) > 5:
-            language = ''
-        post = Post(body=form.post.data, author=current_user,
-                    language=language)
-        db.session.add(post)
-        db.session.commit()
-        flash(_('Your post is now live!'))
-        return redirect(url_for('main.reflect'))
-    page = request.args.get('page', 1, type=int)
-    posts = current_user.followed_posts().paginate(
-        page, current_app.config['POSTS_PER_PAGE'], False)
-    next_url = url_for('main.reflect', page=posts.next_num) \
-        if posts.has_next else None
-    prev_url = url_for('main.reflect', page=posts.prev_num) \
-        if posts.has_prev else None
-    return render_template('reflect.html', title=_('Reflect'), form=form,
-                           posts=posts.items, next_url=next_url,
-                           prev_url=prev_url)
-
-
-@bp.route('/explore')
-@login_required
-def explore():
-    page = request.args.get('page', 1, type=int)
-    posts = Post.query.order_by(Post.timestamp.desc()).paginate(
-        page, current_app.config['POSTS_PER_PAGE'], False)
-    next_url = url_for('main.explore', page=posts.next_num) \
-        if posts.has_next else None
-    prev_url = url_for('main.explore', page=posts.prev_num) \
-        if posts.has_prev else None
-    return render_template('index.html', title=_('Explore'),
-                           posts=posts.items, next_url=next_url,
-                           prev_url=prev_url)
-
+@bp.route('/', methods=['GET', 'POST'])
+@bp.route('/index', methods=['GET', 'POST'])
+def index():
+     return render_template('index.html', title='Home')
 
 @bp.route('/user/<username>')
 @login_required
@@ -94,9 +36,8 @@ def user(username):
                        page=posts.next_num) if posts.has_next else None
     prev_url = url_for('main.user', username=user.username,
                        page=posts.prev_num) if posts.has_prev else None
-    return render_template('user.html', user=user, posts=posts.items,
+    return render_template('user_profile/user.html', user=user, posts=posts.items,
                            next_url=next_url, prev_url=prev_url)
-
 
 @bp.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
@@ -111,9 +52,8 @@ def edit_profile():
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.about_me.data = current_user.about_me
-    return render_template('edit_profile.html', title=_('Edit Profile'),
+    return render_template('user_profile/edit_profile.html', title=_('Edit Profile'),
                            form=form)
-
 
 @bp.route('/follow/<username>')
 @login_required
@@ -128,8 +68,7 @@ def follow(username):
     current_user.follow(user)
     db.session.commit()
     flash(_('You are following %(username)s!', username=username))
-    return redirect(url_for('main.user', username=username))
-
+    return redirect(url_for('user_profile.user', username=username))
 
 @bp.route('/unfollow/<username>')
 @login_required
@@ -140,11 +79,11 @@ def unfollow(username):
         return redirect(url_for('main.index'))
     if user == current_user:
         flash(_('You cannot unfollow yourself!'))
-        return redirect(url_for('main.user', username=username))
+        return redirect(url_for('user_profile.user', username=username))
     current_user.unfollow(user)
     db.session.commit()
     flash(_('You are not following %(username)s.', username=username))
-    return redirect(url_for('main.user', username=username))
+    return redirect(url_for('user_profile.user', username=username))
 
 
 @bp.route('/translate', methods=['POST'])
@@ -169,13 +108,9 @@ def search():
     return render_template('search.html', title=_('Search'), posts=posts,
                            next_url=next_url, prev_url=prev_url)
 
-#survey routes
 
-@bp.route('/fygoals', methods=['GET', 'POST'])
-@login_required
-def api_fygoals():
-    return render_template('fyGoals.html', title='First Year Goals')
+    
 
-@bp.route('/todo', methods=['GET', 'POST'])
-def todoList():
-    return render_template('todo.html', title='To do list')
+
+
+

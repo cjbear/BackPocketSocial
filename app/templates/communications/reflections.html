@@ -1,15 +1,19 @@
 {% extends "base.html" %}
-{% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}
-    <h1>{{ _('Hi, %(username)s!', username=current_user.username) }}</h1>
-    {% if form %}
-    {{ wtf.quick_form(form) }}
-    <br>
-    {% endif %}
+    <table class="table table-hover">
+        <tr>
+            <td width="100px"><img src="{{ user.avatar(100) }}"></td>
+            <td><h1> {{ user.username }}'s Reflections</h1></td>
+
+       
+           
+        </tr>
+</table>
     {% for post in posts %}
-        {% include '_post.html' %}
+        {% include 'communications/_post.html' %}
     {% endfor %}
+    <td><a href="{{ url_for('communications.add_reflection') }}" type="button" class="btn btn-success">Write a new reflection.</a></td>
     <nav aria-label="...">
         <ul class="pager">
             <li class="previous{% if not prev_url %} disabled{% endif %}">

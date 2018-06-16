@@ -1,6 +1,7 @@
 from app import create_app, app, db, cli
 import cli.app
 from app.models import User, Post
+from flask_bootstrap import Bootstrap
 
 app = create_app()
 cli.register(app)

@@ -1,9 +1,12 @@
 from flask import request
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, TextAreaField
+from wtforms import Form
+from wtforms.fields import *
+from wtforms_components import StringField, SelectField, DateField
 from wtforms.validators import ValidationError, DataRequired, Length
 from flask_babel import _, lazy_gettext as _l
 from app.models import User
+import calendar
 
 
 class EditProfileForm(FlaskForm):
@@ -21,18 +24,6 @@ class EditProfileForm(FlaskForm):
             user = User.query.filter_by(username=self.username.data).first()
             if user is not None:
                 raise ValidationError(_('Please use a different username.'))
-
-
-class PostForm(FlaskForm):
-    post = TextAreaField(_l('Say something'), validators=[DataRequired()])
-    submit = SubmitField(_l('Submit'))
-
-class TaskForm(FlaskForm):
-    post = TextAreaField(_l('Say something'), validators=[DataRequired()])
-    todo_priority = TextAreaField(_l('Say something'), validators=[DataRequired()])
-    due_date =
-    submit = SubmitField(_l('Submit'))
-
 
 class SearchForm(FlaskForm):
     q = StringField(_l('Search'), validators=[DataRequired()])

@@ -7,6 +7,7 @@ load_dotenv(os.path.join(basedir, '.env'))
 
 
 class Config(object):
+
     SQLALCHEMY_DATABASE_URI = 'postgresql://cjbear:Oak@8126103@localhost:3305/christopherjohnson'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = 'super-secret'
@@ -25,6 +26,7 @@ class Config(object):
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     POSTS_PER_PAGE = 25
+    TASKS_PER_PAGE = 25
 
 
 
