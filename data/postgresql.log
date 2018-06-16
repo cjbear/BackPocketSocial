@@ -756,3 +756,5 @@
 2018-06-16 10:41:10.627 PDT [981] DETAIL:  Permissions should be u=rwx (0700).
 2018-06-16 10:41:12.372 PDT [984] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
 2018-06-16 10:41:12.372 PDT [984] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-16 11:27:53.849 PDT [5740] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-16 11:27:53.849 PDT [5740] DETAIL:  Permissions should be u=rwx (0700).
