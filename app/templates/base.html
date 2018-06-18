@@ -24,12 +24,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('communications.todo') }}">BackPocket</a>
+                <a class="navbar-brand" href="{{ url_for('communications.todo', username=current_user.username) }}">BackPocket</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('communications.todo') }}">{{ _('Home') }}</a></li>
+                    <li><a href="{{ url_for('communications.todo', username=current_user.username) }}">{{ _('Home') }}</a></li>
                     <li><a href="{{ url_for('communications.reflections', username=current_user.username) }}">{{ _('Reflections') }}</a></li>
+                    <li><a href="{{ url_for('canvas.assignments') }}">{{ _('Assignments') }}</a></li>
                 </ul>
                 {% if g.search_form %}
                 <form class="navbar-form navbar-left" method="get"

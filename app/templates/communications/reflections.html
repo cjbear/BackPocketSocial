@@ -5,15 +5,13 @@
         <tr>
             <td width="100px"><img src="{{ user.avatar(100) }}"></td>
             <td><h1> {{ user.username }}'s Reflections</h1></td>
-
-       
-           
+            <td><a href="{{ url_for('communications.add_reflection', username=current_user.username) }}" type="button" class="btn btn-success">Write a new reflection.</a></td>
         </tr>
 </table>
     {% for post in posts %}
         {% include 'communications/_post.html' %}
     {% endfor %}
-    <td><a href="{{ url_for('communications.add_reflection') }}" type="button" class="btn btn-success">Write a new reflection.</a></td>
+   
     <nav aria-label="...">
         <ul class="pager">
             <li class="previous{% if not prev_url %} disabled{% endif %}">

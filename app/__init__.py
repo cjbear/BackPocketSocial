@@ -43,6 +43,9 @@ def create_app(config_class=Config):
     from app.api import bp as api_bp
     app.register_blueprint(api_bp, url_prefix='/api')
 
+    from app.canvas import bp as canvas_bp
+    app.register_blueprint(canvas_bp)
+
     from app.errors import bp as errors_bp
     app.register_blueprint(errors_bp)
 

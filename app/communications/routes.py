@@ -73,20 +73,22 @@ def export_posts():
     return redirect(url_for('communications.user', username=current_user.username))
 
 
-@bp.route('/add_reflection', methods=['GET', 'POST'])
+@bp.route('/add_reflection/<username>', methods=['GET', 'POST'])
 @login_required
-def reflect(username):
-    form = TaskForm()
+def add_reflection(username):
+    form = PostForm()
     if form.validate_on_submit():
-        tasks = Todotask( todo_name=form.todo_name.data, due_date=form.due_date.data, todo_priority=form.todo_priority.data, author=current_user)
+        posts = Post(body=form.post.data, author=current_user)
         db.session.commit()
-        flash(_('Your task is created.'))
-    return redirect(url_for('communications/add_reflection.html'))
+        flash(_('Your reflection is published.'))
+        return redirect(url_for('communications.reflections', username=current_user.username))
+    return render_template('communications/add_reflection.html', title='Add reflection.', form=form)
 
 
 @bp.route('/reflections/<username>', methods=['GET', 'POST'])
 @login_required
 def reflections(username):
+    form = PostForm()
     user = User.query.filter_by(username=username).first_or_404()
     page = request.args.get('page', 1, type=int)
     posts = user.posts.order_by(Post.timestamp.desc()).paginate(
@@ -100,24 +102,30 @@ def reflections(username):
                            prev_url=prev_url)
     
 
-
-@bp.route('/todo', methods=['GET', 'POST'])
+@bp.route('/todo/<username>', methods=['GET', 'POST'])
 @login_required
-def todo():
+def todo(username):
     form = TaskForm()
-    if form.validate_on_submit():
-        tasks = Todotask( todo_name=form.todo_name.data, due_date=form.due_date.data, todo_priority=form.todo_priority.data, author=current_user)
-        db.session.commit()
-        flash(_('Your task is created.'))
-        return redirect(url_for('communications.todo'))
+    user = User.query.filter_by(username=username).first_or_404()
     page = request.args.get('page', 1, type=int)
-    tasks = current_user.followed_posts().paginate(
+    tasks = user.tasks.order_by(Todotask.todo_name.desc()).paginate(
         page, current_app.config['TASKS_PER_PAGE'], False)
     next_url = url_for('communications.todo', page=tasks.next_num) \
         if tasks.has_next else None
     prev_url = url_for('communications.todo', page=tasks.prev_num) \
         if tasks.has_prev else None
-    return render_template('todo/todo.html', title=_('Todo List'), form=form,
+    return render_template('communications/todo.html', title=_('Todo List'), form=form,
                            tasks=tasks.items, next_url=next_url,
                            prev_url=prev_url)
-    return render_template('todo/todo.html', title='Todo List')
+    
+
+@bp.route('/add_todo', methods=['GET', 'POST'])
+@login_required
+def add_todo():
+    form = TaskForm()
+    if form.validate_on_submit():
+        tasks = Todotask(todo_name=form.todo_name.data, due_date=form.due_date.data, todo_priority=form.todo_priority.data)
+        db.session.commit()
+        flash(_('Your task is posted.'))
+        return redirect(url_for('communications.todo', username=current_user.username))
+    return render_template('communications/add_todo.html', title='Add todo task.', form=form)

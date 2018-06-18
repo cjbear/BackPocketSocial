@@ -103,7 +103,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
-    posts = db.relationship('Todotask', backref='author', lazy='dynamic')
+    tasks = db.relationship('Todotask', backref='author', lazy='dynamic')
     posts = db.relationship('Post', backref='author', lazy='dynamic')
     about_me = db.Column(db.String(140))
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
@@ -383,3 +383,14 @@ class Task(db.Model):
     def get_progress(self):
         job = self.get_rq_job()
         return job.meta.get('progress', 0) if job is not None else 100
+
+class Assignments(db.Model):
+    id = db.Column(db.String(36), primary_key=True)
+    base = db.Column(db.Integer)
+    title =  db.Column(db.String(128), index=True)
+    due_at =  db.Column(db.DateTime())
+    unlock_at =  db.Column(db.DateTime())
+    lock_at =  db.Column(db.DateTime())
+
+    def __repr__(self):
+        return '<Assignments {}>'.format(self.body)
