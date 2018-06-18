@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+<html lang="en">
+<header>
+    <link rel="stylesheet" href="{{ url_for( 'static', 'stylesheets/todo.css' ) }}">
+</header>
+  
+    <body>
+     
+        {% block app_content %}
+        <head>
+
+        </head>
+              
+        <h1>Add a todo task.</h1>
+        <div class="row">
+            <div class="col-md-4">
+          
+                {{ wtf.quick_form(form) }}
+            
+            </div>
+        </div>
+              
+        {% endblock %}
+    </body>
+
+</html>

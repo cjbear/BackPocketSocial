@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+<html lang="en">
+<header>
+    <link rel="stylesheet" href="{{ url_for( 'static', 'stylesheets/todo.css' ) }}">
+</header>
+  
+    <body>
+     
+        {% block app_content %}
+        <head>
+            <h1>{{ _('%(username)s', username=current_user.username) }}</h1>
+            <h2>Your To Do List</h2>
+        </head>
+
+        <div class="container">
+            <table class="table table-sm">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Task</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col">Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                    <tr>
+                        {% for task in tasks %}
+                        <th scope="row" span id="task{{ task.id }}">{{ task.todo_name }}</span></th>
+                        <td>{{ task.todo_priority }}</td>
+                        <td>{{ task.due_date }}</td>
+                        {% endfor %}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+              
+         <a href="{{ url_for('communications.add_todo', username=current_user.username) }}" type="button" class="btn btn-success">Create a new todo task.</a>
+            
+        </div>
+        {% endblock %}
+    </body>
+
+</html>
+
+
+
+
