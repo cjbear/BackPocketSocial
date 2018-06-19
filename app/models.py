@@ -14,6 +14,7 @@ import rq
 from app import db, login
 from app.search import add_to_index, remove_from_index, query_index
 from sqlalchemy import Column, Integer, DateTime
+from canvasapi import Canvas
 
 
 class SearchableMixin(object):
@@ -386,11 +387,20 @@ class Task(db.Model):
 
 class Assignments(db.Model):
     id = db.Column(db.String(36), primary_key=True)
-    base = db.Column(db.Integer)
-    title =  db.Column(db.String(128), index=True)
+    description =  db.Column(db.String(128), index=True)
     due_at =  db.Column(db.DateTime())
     unlock_at =  db.Column(db.DateTime())
     lock_at =  db.Column(db.DateTime())
+    API_URL = 'https://canvas.instructure.com/api/v1/courses/1234368/assignments.json?'
+    API_KEY = '7~pMe69XczZkRi2anWMxItDgHpAeC0HnHvb0lZlAghSoxu5gS1GdmEjsn98c8Waf7C'
+
+    def __init__(self, id, base, title, due_at, unlock_at, lock_at):
+        self.canvas = Canvas(API_URL, API_KEY)
+        self.id = id
+        self.description = description
+        self.due_at = due_at
+        self.unlock_at = unlock_at
+        self.lock_at = lock_at
 
     def __repr__(self):
         return '<Assignments {}>'.format(self.body)

@@ -14,6 +14,7 @@ class Config(object):
     SECURITY_REGISTERABLE = True
     SECURITY_PASSWORD_HASH = 'bcrypt'
     SECURITY_PASSWORD_SALT = '$2ajfskal$KLJK34$3r$jklJKL$2ad'
+   
 
     BOOTSTRAP_USE_MINIFIED = True
     MAIL_SERVER = os.environ.get('MAIL_SERVER')

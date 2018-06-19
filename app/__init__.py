@@ -12,7 +12,7 @@ from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
 from elasticsearch import Elasticsearch
 from config import Config
-
+from canvasapi import Canvas
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -29,7 +29,6 @@ from app import db
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
-
     db.init_app(app)
     migrate.init_app(app, db)
     login.init_app(app)

@@ -4,7 +4,7 @@
     {% block app_content %}
   <h1>Your assignments</h1>
   {% for assignment in assignments %}
-    <div>{{assignment["title"]}}</div>
+    <div>{{assignment["description"]}}</div>
     <div>{{assignment["due_at"]}}</div>
     <div>{{assignment["unlock_at"]}}</div>
     <div>{{assignment["lock_at"]}}</div>
