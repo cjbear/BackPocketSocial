@@ -73,18 +73,6 @@ def export_posts():
     return redirect(url_for('communications.user', username=current_user.username))
 
 
-@bp.route('/add_reflection/<username>', methods=['GET', 'POST'])
-@login_required
-def add_reflection(username):
-    form = PostForm()
-    if form.validate_on_submit():
-        posts = Post(body=form.post.data, author=current_user)
-        db.session.commit()
-        flash(_('Your reflection is published.'))
-        return redirect(url_for('communications.reflections', username=current_user.username))
-    return render_template('communications/add_reflection.html', title='Add reflection.', form=form)
-
-
 @bp.route('/reflections/<username>', methods=['GET', 'POST'])
 @login_required
 def reflections(username):
@@ -100,6 +88,18 @@ def reflections(username):
     return render_template('communications/reflections.html', title=_('Reflections'), form=form, user=user,
                            posts=posts.items, next_url=next_url,
                            prev_url=prev_url)
+
+@bp.route('/add_reflection/<username>', methods=['GET', 'POST'])
+@login_required
+def add_reflection(username):
+    form = PostForm()
+    if form.validate_on_submit():
+        posts = Post(body=form.post.data, author=current_user)
+        db.session.commit()
+        flash(_('Your reflection is published.'))
+        return redirect(url_for('communications.reflections', username=current_user.username))
+    return render_template('communications/add_reflection.html', title='Add reflection.', form=form)
+
     
 
 @bp.route('/todo/<username>', methods=['GET', 'POST'])

@@ -20,9 +20,16 @@ from app.models import FyOneGoals
 
 from app.api import bp
 
+
+@bp.route('/fygoals/', methods=['GET'])
+def fygoals():
+    return render_template('surveys/fyGoals.html')
+
+
 @bp.route('/fygoal/<int:id>', methods=['GET'])
 def get_fygoal(id):
-    req_data = request.get_json()
+    surveyResponse = request.get_json()
+    fyGoalData = surveyResponse.json()
     
     FirstDraftGoal  = ['pages']['name']['page1']['elements']['name']['FirstDraftGoal']
     startDate       = ['pages']['name']['page1']['elements']['name']['startDate']
@@ -34,7 +41,7 @@ def get_fygoal(id):
     timely_fy01     = ['pages']['name']['page2']['elements']['name']['timely_fy01']
     finalGoal_fy01  = ['pages']['name']['page3']['elements']['name']['finalGoal_fy01']
 
-    return 
+    return render_template('surveys/fyGoals.html')
 
 @bp.route('/fygoal', methods=['GET'])
 def get_users():
