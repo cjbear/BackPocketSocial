@@ -28100,3 +28100,268 @@
 2018-06-18 23:11:32.533 PDT [1656] LOG:  startup process (PID 1657) exited with exit code 1
 2018-06-18 23:11:32.533 PDT [1656] LOG:  aborting startup due to startup process failure
 2018-06-18 23:11:32.534 PDT [1656] LOG:  database system is shut down
+2018-06-18 23:49:12.998 PDT [3006] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-18 23:49:12.998 PDT [3006] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-18 23:49:12.999 PDT [3006] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-18 23:49:13.022 PDT [3007] LOG:  database system was interrupted while in recovery at 2018-06-18 23:11:32 PDT
+2018-06-18 23:49:13.022 PDT [3007] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-18 23:49:13.067 PDT [3007] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-18 23:49:13.067 PDT [3007] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-18 23:49:13.069 PDT [3006] LOG:  startup process (PID 3007) exited with exit code 1
+2018-06-18 23:49:13.069 PDT [3006] LOG:  aborting startup due to startup process failure
+2018-06-18 23:49:13.070 PDT [3006] LOG:  database system is shut down
+2018-06-18 23:49:14.228 PDT [3010] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-18 23:49:14.229 PDT [3010] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-18 23:49:14.229 PDT [3010] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-18 23:49:14.243 PDT [3011] LOG:  database system was interrupted while in recovery at 2018-06-18 23:49:13 PDT
+2018-06-18 23:49:14.243 PDT [3011] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-18 23:49:14.284 PDT [3011] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-18 23:49:14.284 PDT [3011] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-18 23:49:14.285 PDT [3010] LOG:  startup process (PID 3011) exited with exit code 1
+2018-06-18 23:49:14.285 PDT [3010] LOG:  aborting startup due to startup process failure
+2018-06-18 23:49:14.286 PDT [3010] LOG:  database system is shut down
+2018-06-18 23:55:34.547 PDT [473] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-18 23:55:34.547 PDT [473] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-18 23:55:34.548 PDT [473] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-18 23:55:34.577 PDT [474] LOG:  database system was interrupted while in recovery at 2018-06-18 23:49:14 PDT
+2018-06-18 23:55:34.577 PDT [474] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-18 23:55:34.788 PDT [474] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-18 23:55:34.788 PDT [474] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-18 23:55:34.789 PDT [473] LOG:  startup process (PID 474) exited with exit code 1
+2018-06-18 23:55:34.789 PDT [473] LOG:  aborting startup due to startup process failure
+2018-06-18 23:55:34.790 PDT [473] LOG:  database system is shut down
+2018-06-18 23:56:36.065 PDT [729] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-18 23:56:36.065 PDT [729] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-18 23:56:36.066 PDT [729] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-18 23:56:36.082 PDT [730] LOG:  database system was interrupted while in recovery at 2018-06-18 23:55:34 PDT
+2018-06-18 23:56:36.082 PDT [730] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-18 23:56:36.128 PDT [730] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-18 23:56:36.129 PDT [730] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-18 23:56:36.130 PDT [729] LOG:  startup process (PID 730) exited with exit code 1
+2018-06-18 23:56:36.130 PDT [729] LOG:  aborting startup due to startup process failure
+2018-06-18 23:56:36.131 PDT [729] LOG:  database system is shut down
+2018-06-18 23:56:51.904 PDT [756] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-18 23:56:51.904 PDT [756] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-18 23:56:51.905 PDT [756] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-18 23:56:51.918 PDT [757] LOG:  database system was interrupted while in recovery at 2018-06-18 23:56:36 PDT
+2018-06-18 23:56:51.918 PDT [757] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-18 23:56:51.959 PDT [757] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-18 23:56:51.959 PDT [757] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-18 23:56:51.960 PDT [756] LOG:  startup process (PID 757) exited with exit code 1
+2018-06-18 23:56:51.960 PDT [756] LOG:  aborting startup due to startup process failure
+2018-06-18 23:56:51.961 PDT [756] LOG:  database system is shut down
+2018-06-18 23:56:53.102 PDT [761] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-18 23:56:53.102 PDT [761] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-18 23:56:53.103 PDT [761] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-18 23:56:53.115 PDT [762] LOG:  database system was interrupted while in recovery at 2018-06-18 23:56:51 PDT
+2018-06-18 23:56:53.115 PDT [762] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-18 23:56:53.158 PDT [762] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-18 23:56:53.158 PDT [762] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-18 23:56:53.159 PDT [761] LOG:  startup process (PID 762) exited with exit code 1
+2018-06-18 23:56:53.159 PDT [761] LOG:  aborting startup due to startup process failure
+2018-06-18 23:56:53.160 PDT [761] LOG:  database system is shut down
+2018-06-18 23:57:10.750 PDT [775] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-18 23:57:10.750 PDT [775] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-18 23:57:10.751 PDT [775] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-18 23:57:10.763 PDT [776] LOG:  database system was interrupted while in recovery at 2018-06-18 23:56:53 PDT
+2018-06-18 23:57:10.763 PDT [776] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-18 23:57:10.801 PDT [776] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-18 23:57:10.802 PDT [776] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-18 23:57:10.802 PDT [775] LOG:  startup process (PID 776) exited with exit code 1
+2018-06-18 23:57:10.802 PDT [775] LOG:  aborting startup due to startup process failure
+2018-06-18 23:57:10.803 PDT [775] LOG:  database system is shut down
+2018-06-18 23:57:14.381 PDT [780] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-18 23:57:14.381 PDT [780] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-18 23:57:14.382 PDT [780] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-18 23:57:14.394 PDT [781] LOG:  database system was interrupted while in recovery at 2018-06-18 23:57:10 PDT
+2018-06-18 23:57:14.394 PDT [781] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-18 23:57:14.438 PDT [781] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-18 23:57:14.439 PDT [781] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-18 23:57:14.439 PDT [780] LOG:  startup process (PID 781) exited with exit code 1
+2018-06-18 23:57:14.439 PDT [780] LOG:  aborting startup due to startup process failure
+2018-06-18 23:57:14.440 PDT [780] LOG:  database system is shut down
+2018-06-18 23:57:17.823 PDT [784] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-18 23:57:17.823 PDT [784] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-18 23:57:17.824 PDT [784] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-18 23:57:17.838 PDT [785] LOG:  database system was interrupted while in recovery at 2018-06-18 23:57:14 PDT
+2018-06-18 23:57:17.838 PDT [785] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-18 23:57:17.879 PDT [785] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-18 23:57:17.880 PDT [785] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-18 23:57:17.880 PDT [784] LOG:  startup process (PID 785) exited with exit code 1
+2018-06-18 23:57:17.881 PDT [784] LOG:  aborting startup due to startup process failure
+2018-06-18 23:57:17.882 PDT [784] LOG:  database system is shut down
+2018-06-18 23:57:44.322 PDT [794] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-18 23:57:44.322 PDT [794] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 00:12:05.771 PDT [955] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 00:12:05.771 PDT [955] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 00:12:17.756 PDT [960] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 00:12:17.756 PDT [960] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 00:12:24.904 PDT [963] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 00:12:24.904 PDT [963] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 00:12:28.123 PDT [966] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 00:12:28.123 PDT [966] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 00:13:03.610 PDT [1014] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 00:13:03.610 PDT [1014] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 00:13:03.611 PDT [1014] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 00:13:03.624 PDT [1015] LOG:  database system was interrupted while in recovery at 2018-06-18 23:57:17 PDT
+2018-06-19 00:13:03.624 PDT [1015] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 00:13:03.667 PDT [1015] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 00:13:03.668 PDT [1015] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 00:13:03.669 PDT [1014] LOG:  startup process (PID 1015) exited with exit code 1
+2018-06-19 00:13:03.669 PDT [1014] LOG:  aborting startup due to startup process failure
+2018-06-19 00:13:03.670 PDT [1014] LOG:  database system is shut down
+2018-06-19 00:13:24.934 PDT [1020] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 00:13:24.934 PDT [1020] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 00:13:24.935 PDT [1020] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 00:13:24.948 PDT [1021] LOG:  database system was interrupted while in recovery at 2018-06-19 00:13:03 PDT
+2018-06-19 00:13:24.948 PDT [1021] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 00:13:24.989 PDT [1021] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 00:13:24.989 PDT [1021] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 00:13:24.990 PDT [1020] LOG:  startup process (PID 1021) exited with exit code 1
+2018-06-19 00:13:24.990 PDT [1020] LOG:  aborting startup due to startup process failure
+2018-06-19 00:13:24.991 PDT [1020] LOG:  database system is shut down
+2018-06-19 00:13:42.393 PDT [1046] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 00:13:42.393 PDT [1046] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 00:13:42.394 PDT [1046] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 00:13:42.407 PDT [1047] LOG:  database system was interrupted while in recovery at 2018-06-19 00:13:24 PDT
+2018-06-19 00:13:42.407 PDT [1047] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 00:13:42.450 PDT [1047] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 00:13:42.451 PDT [1047] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 00:13:42.451 PDT [1046] LOG:  startup process (PID 1047) exited with exit code 1
+2018-06-19 00:13:42.451 PDT [1046] LOG:  aborting startup due to startup process failure
+2018-06-19 00:13:42.452 PDT [1046] LOG:  database system is shut down
+2018-06-19 00:13:48.852 PDT [1050] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 00:13:48.852 PDT [1050] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 00:13:48.853 PDT [1050] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 00:13:48.866 PDT [1051] LOG:  database system was interrupted while in recovery at 2018-06-19 00:13:42 PDT
+2018-06-19 00:13:48.866 PDT [1051] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 00:13:48.909 PDT [1051] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 00:13:48.909 PDT [1051] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 00:13:48.910 PDT [1050] LOG:  startup process (PID 1051) exited with exit code 1
+2018-06-19 00:13:48.910 PDT [1050] LOG:  aborting startup due to startup process failure
+2018-06-19 00:13:48.911 PDT [1050] LOG:  database system is shut down
+2018-06-19 00:14:28.164 PDT [1083] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 00:14:28.164 PDT [1083] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 00:14:28.164 PDT [1083] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 00:14:28.176 PDT [1084] LOG:  database system was interrupted while in recovery at 2018-06-19 00:13:48 PDT
+2018-06-19 00:14:28.176 PDT [1084] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 00:14:28.216 PDT [1084] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 00:14:28.216 PDT [1084] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 00:14:28.217 PDT [1083] LOG:  startup process (PID 1084) exited with exit code 1
+2018-06-19 00:14:28.217 PDT [1083] LOG:  aborting startup due to startup process failure
+2018-06-19 00:14:28.218 PDT [1083] LOG:  database system is shut down
+2018-06-19 00:14:33.298 PDT [1088] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 00:14:33.298 PDT [1088] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 00:14:33.299 PDT [1088] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 00:14:33.325 PDT [1089] LOG:  database system was interrupted while in recovery at 2018-06-19 00:14:28 PDT
+2018-06-19 00:14:33.325 PDT [1089] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 00:14:33.343 PDT [1090] FATAL:  the database system is starting up
+2018-06-19 00:14:33.384 PDT [1089] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 00:14:33.384 PDT [1089] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 00:14:33.385 PDT [1088] LOG:  startup process (PID 1089) exited with exit code 1
+2018-06-19 00:14:33.385 PDT [1088] LOG:  aborting startup due to startup process failure
+2018-06-19 00:14:33.386 PDT [1088] LOG:  database system is shut down
+2018-06-19 00:29:01.069 PDT [1394] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 00:29:01.069 PDT [1394] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 00:29:01.069 PDT [1394] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 00:29:01.084 PDT [1395] LOG:  database system was interrupted while in recovery at 2018-06-19 00:14:33 PDT
+2018-06-19 00:29:01.084 PDT [1395] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 00:29:01.132 PDT [1395] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 00:29:01.133 PDT [1395] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 00:29:01.133 PDT [1394] LOG:  startup process (PID 1395) exited with exit code 1
+2018-06-19 00:29:01.133 PDT [1394] LOG:  aborting startup due to startup process failure
+2018-06-19 00:29:01.135 PDT [1394] LOG:  database system is shut down
+2018-06-19 00:29:02.142 PDT [1398] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 00:29:02.142 PDT [1398] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 00:29:02.143 PDT [1398] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 00:29:02.160 PDT [1399] LOG:  database system was interrupted while in recovery at 2018-06-19 00:29:01 PDT
+2018-06-19 00:29:02.160 PDT [1399] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 00:29:02.200 PDT [1399] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 00:29:02.200 PDT [1399] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 00:29:02.201 PDT [1398] LOG:  startup process (PID 1399) exited with exit code 1
+2018-06-19 00:29:02.201 PDT [1398] LOG:  aborting startup due to startup process failure
+2018-06-19 00:29:02.202 PDT [1398] LOG:  database system is shut down
+2018-06-19 00:30:07.970 PDT [1577] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 00:30:07.970 PDT [1577] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 00:30:07.971 PDT [1577] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 00:30:07.985 PDT [1578] LOG:  database system was interrupted while in recovery at 2018-06-19 00:29:02 PDT
+2018-06-19 00:30:07.985 PDT [1578] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 00:30:08.028 PDT [1578] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 00:30:08.028 PDT [1578] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 00:30:08.029 PDT [1577] LOG:  startup process (PID 1578) exited with exit code 1
+2018-06-19 00:30:08.029 PDT [1577] LOG:  aborting startup due to startup process failure
+2018-06-19 00:30:08.030 PDT [1577] LOG:  database system is shut down
+2018-06-19 00:30:09.407 PDT [1582] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 00:30:09.408 PDT [1582] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 00:30:09.409 PDT [1582] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 00:30:09.423 PDT [1583] LOG:  database system was interrupted while in recovery at 2018-06-19 00:30:08 PDT
+2018-06-19 00:30:09.423 PDT [1583] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 00:30:09.468 PDT [1583] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 00:30:09.469 PDT [1583] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 00:30:09.470 PDT [1582] LOG:  startup process (PID 1583) exited with exit code 1
+2018-06-19 00:30:09.470 PDT [1582] LOG:  aborting startup due to startup process failure
+2018-06-19 00:30:09.471 PDT [1582] LOG:  database system is shut down
+2018-06-19 00:30:46.848 PDT [1590] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 00:30:46.848 PDT [1590] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 00:30:46.849 PDT [1590] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 00:30:46.864 PDT [1591] LOG:  database system was interrupted while in recovery at 2018-06-19 00:30:09 PDT
+2018-06-19 00:30:46.864 PDT [1591] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 00:30:46.907 PDT [1591] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 00:30:46.907 PDT [1591] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 00:30:46.908 PDT [1590] LOG:  startup process (PID 1591) exited with exit code 1
+2018-06-19 00:30:46.908 PDT [1590] LOG:  aborting startup due to startup process failure
+2018-06-19 00:30:46.909 PDT [1590] LOG:  database system is shut down
+2018-06-19 10:19:47.885 PDT [512] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 10:19:47.885 PDT [512] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 11:37:07.502 PDT [1081] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 11:37:07.502 PDT [1081] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 11:38:05.664 PDT [1134] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 11:38:05.664 PDT [1134] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 11:38:05.665 PDT [1134] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 11:38:05.699 PDT [1135] LOG:  database system was interrupted while in recovery at 2018-06-19 00:30:46 PDT
+2018-06-19 11:38:05.699 PDT [1135] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 11:38:05.752 PDT [1135] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 11:38:05.753 PDT [1135] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 11:38:05.755 PDT [1134] LOG:  startup process (PID 1135) exited with exit code 1
+2018-06-19 11:38:05.755 PDT [1134] LOG:  aborting startup due to startup process failure
+2018-06-19 11:38:05.756 PDT [1134] LOG:  database system is shut down
+2018-06-19 11:38:08.184 PDT [1139] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 11:38:08.185 PDT [1139] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 11:38:08.186 PDT [1139] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 11:38:08.200 PDT [1140] LOG:  database system was interrupted while in recovery at 2018-06-19 11:38:05 PDT
+2018-06-19 11:38:08.200 PDT [1140] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 11:38:08.243 PDT [1140] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 11:38:08.244 PDT [1140] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 11:38:08.245 PDT [1139] LOG:  startup process (PID 1140) exited with exit code 1
+2018-06-19 11:38:08.245 PDT [1139] LOG:  aborting startup due to startup process failure
+2018-06-19 11:38:08.247 PDT [1139] LOG:  database system is shut down
+2018-06-19 11:38:16.125 PDT [1144] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 11:38:16.125 PDT [1144] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 11:38:16.126 PDT [1144] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 11:38:16.139 PDT [1145] LOG:  database system was interrupted while in recovery at 2018-06-19 11:38:08 PDT
+2018-06-19 11:38:16.139 PDT [1145] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 11:38:16.177 PDT [1145] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 11:38:16.177 PDT [1145] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 11:38:16.178 PDT [1144] LOG:  startup process (PID 1145) exited with exit code 1
+2018-06-19 11:38:16.178 PDT [1144] LOG:  aborting startup due to startup process failure
+2018-06-19 11:38:16.179 PDT [1144] LOG:  database system is shut down
+2018-06-19 11:38:19.128 PDT [1149] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 11:38:19.128 PDT [1149] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 11:38:19.129 PDT [1149] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 11:38:19.142 PDT [1150] LOG:  database system was interrupted while in recovery at 2018-06-19 11:38:16 PDT
+2018-06-19 11:38:19.142 PDT [1150] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 11:38:19.185 PDT [1150] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 11:38:19.185 PDT [1150] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 11:38:19.186 PDT [1149] LOG:  startup process (PID 1150) exited with exit code 1
+2018-06-19 11:38:19.186 PDT [1149] LOG:  aborting startup due to startup process failure
+2018-06-19 11:38:19.187 PDT [1149] LOG:  database system is shut down
+2018-06-19 11:38:29.437 PDT [1153] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 11:38:29.437 PDT [1153] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 11:38:29.438 PDT [1153] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 11:38:29.450 PDT [1154] LOG:  database system was interrupted while in recovery at 2018-06-19 11:38:19 PDT
+2018-06-19 11:38:29.450 PDT [1154] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 11:38:29.499 PDT [1154] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 11:38:29.500 PDT [1154] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 11:38:29.501 PDT [1153] LOG:  startup process (PID 1154) exited with exit code 1
+2018-06-19 11:38:29.501 PDT [1153] LOG:  aborting startup due to startup process failure
+2018-06-19 11:38:29.502 PDT [1153] LOG:  database system is shut down

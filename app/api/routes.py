@@ -15,18 +15,21 @@ from app.translate import translate
 from app.api import bp
 import json
 from flask import jsonify
-from app.models import FyOneGoals
 
 
 from app.api import bp
 
+@bp.route('/menu', methods=['GET'])
+def menu():
+    return render_template('api/menu.html')
 
-@bp.route('/fygoals/', methods=['GET'])
+
+@bp.route('/fygoals', methods=['GET'])
 def fygoals():
-    return render_template('surveys/fyGoals.html')
+    return render_template('api/fyGoals.html')
 
 
-@bp.route('/fygoal/<int:id>', methods=['GET'])
+@bp.route('/fygoals/<int:id>', methods=['GET'])
 def get_fygoal(id):
     surveyResponse = request.get_json()
     fyGoalData = surveyResponse.json()
@@ -41,7 +44,7 @@ def get_fygoal(id):
     timely_fy01     = ['pages']['name']['page2']['elements']['name']['timely_fy01']
     finalGoal_fy01  = ['pages']['name']['page3']['elements']['name']['finalGoal_fy01']
 
-    return render_template('surveys/fyGoals.html')
+    return render_template('api/fyGoalsResults.html')
 
 @bp.route('/fygoal', methods=['GET'])
 def get_users():
