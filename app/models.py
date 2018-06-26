@@ -95,21 +95,31 @@ followers = db.Table(
     db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
 )
 
+
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
 
 class User(UserMixin, PaginatedAPIMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    __table_args__ = {'extend_existing': True} 
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
+    firstName = db.Column(db.String(64))
+    lastName = db.Column(db.String(64))
+    mobileNumber = db.Column(db.String(12))
+    about_me = db.Column(db.String(140))
+
+
     tasks = db.relationship('Todotask', backref='author', lazy='dynamic')
     posts = db.relationship('Post', backref='author', lazy='dynamic')
-    about_me = db.Column(db.String(140))
+    assignments = db.relationship('Assignments', foreign_keys='Assignments.student_id', backref='author', lazy='dynamic')
+
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
     token = db.Column(db.String(32), index=True, unique=True)
     token_expiration = db.Column(db.DateTime)
+    
     followed = db.relationship(
         'User', secondary=followers,
         primaryjoin=(followers.c.follower_id == id),
@@ -307,7 +317,7 @@ class Notification(db.Model):
         #If the fields are not empty, then the setattr records the data in the database (I think)
         #IsCompleted = db.Column(db.Boolean, default=False)
 
-class FyOneGoals(db.Model):
+class FyGoals(db.Model):
     id =db.Column(db.String(36), primary_key=True)
     post_id =db.Column(db.Integer)
     survey_result = db.Column(db.String(20000))
@@ -391,6 +401,8 @@ class Assignments(db.Model):
     due_at =  db.Column(db.DateTime())
     unlock_at =  db.Column(db.DateTime())
     lock_at =  db.Column(db.DateTime())
+    student_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     API_URL = 'https://canvas.instructure.com/api/v1/courses/1234368/assignments.json?'
     API_KEY = '7~pMe69XczZkRi2anWMxItDgHpAeC0HnHvb0lZlAghSoxu5gS1GdmEjsn98c8Waf7C'
 
