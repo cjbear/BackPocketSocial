@@ -1,14 +1,17 @@
 import os
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
 from dotenv import load_dotenv
+from sqlalchemy import create_engine
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(basedir, '.env'))
 
+engine = create_engine('mysql+mysqldb://root:Oak@8126103@localhost:3306/backpocketdb')
 
 class Config(object):
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql://cjbear:Oak@8126103@localhost:3305/christopherjohnson'
+    SQLALCHEMY_DATABASE_URI = 'mysql+mysqldb://root:Oak@8126103@localhost:3306/backpocketdb'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = 'super-secret'
     SECURITY_REGISTERABLE = True
@@ -26,8 +29,10 @@ class Config(object):
     LANGUAGES = ['en', 'es']
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
     POSTS_PER_PAGE = 25
     TASKS_PER_PAGE = 25
+    ASSIGNMENTS_PER_PAGE = 25
 
 
 

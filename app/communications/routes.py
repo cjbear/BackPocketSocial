@@ -12,10 +12,9 @@ from flask_babel import _, get_locale
 from app import db
 from app.main.forms import EditProfileForm, SearchForm 
 from app.communications.forms import MessageForm, PostForm, TaskForm
-from app.models import User, Post, Todotask
+from app.models import User, Post, Task, Notification
 from app.translate import translate
 from app.communications import bp
-
 
 @bp.route('/messages')
 @login_required
@@ -94,7 +93,7 @@ def reflections(username):
 def add_reflection(username):
     form = PostForm()
     if form.validate_on_submit():
-        posts = Post(body=form.post.data, author=current_user)
+        posts = Post(date_time = datetime.date.today(), body=form.post.data, author=current_user)
         db.session.commit()
         flash(_('Your reflection is published.'))
         return redirect(url_for('communications.reflections', username=current_user.username))
@@ -108,23 +107,23 @@ def todo(username):
     form = TaskForm()
     user = User.query.filter_by(username=username).first_or_404()
     page = request.args.get('page', 1, type=int)
-    tasks = user.tasks.order_by(Todotask.todo_name.desc()).paginate(
+    tasks = user.tasks.order_by(Task.timestamp.desc()).paginate(
         page, current_app.config['TASKS_PER_PAGE'], False)
     next_url = url_for('communications.todo', page=tasks.next_num) \
         if tasks.has_next else None
     prev_url = url_for('communications.todo', page=tasks.prev_num) \
         if tasks.has_prev else None
-    return render_template('communications/todo.html', title=_('Todo List'), form=form,
+    return render_template('communications/todo.html', title=_('Todo List'), form=form, user=user,
                            tasks=tasks.items, next_url=next_url,
                            prev_url=prev_url)
     
 
-@bp.route('/add_todo', methods=['GET', 'POST'])
+@bp.route('/add_todo/<username>', methods=['GET', 'POST'])
 @login_required
-def add_todo():
+def add_todo(username):
     form = TaskForm()
     if form.validate_on_submit():
-        tasks = Todotask(todo_name=form.todo_name.data, due_date=form.due_date.data, todo_priority=form.todo_priority.data)
+        tasks = Task(name=form.name.data, priority=form.priority.data, due_date=form.due_date.data, description=form.description.data, user=current_user)
         db.session.commit()
         flash(_('Your task is posted.'))
         return redirect(url_for('communications.todo', username=current_user.username))

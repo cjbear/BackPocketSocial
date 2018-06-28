@@ -111,8 +111,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
     mobileNumber = db.Column(db.String(12))
     about_me = db.Column(db.String(140))
 
-
-    tasks = db.relationship('Todotask', backref='author', lazy='dynamic')
+    tasks = db.relationship('Task', backref='user', lazy='dynamic')
     posts = db.relationship('Post', backref='author', lazy='dynamic')
     assignments = db.relationship('Assignments', foreign_keys='Assignments.student_id', backref='author', lazy='dynamic')
 
@@ -365,21 +364,12 @@ class FyGoals(db.Model):
 
         from app.search import add_to_index, remove_from_index, query_index
 
-class Todotask(db.Model):
-    
-    id =db.Column(db.Integer, primary_key=True)    
-    todo_name = db.Column(db.String(255))
-    todo_priority = db.Column(db.String(10))
-    due_date = db.Column(db.DateTime(), index=True, default=datetime.utcnow)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    user = db.relationship('User', uselist=False, backref='Todotask')
-    
-    def __repr__(self):
-        return '<Todotask {}>'.format(self.body)
-
 class Task(db.Model):
     id = db.Column(db.String(36), primary_key=True)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)  
     name = db.Column(db.String(128), index=True)
+    priority = db.Column(db.String(10))
+    due_date = db.Column(db.DateTime(), index=True, default=datetime.utcnow)
     description = db.Column(db.String(128))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     complete = db.Column(db.Boolean, default=False)

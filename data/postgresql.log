@@ -28365,3 +28365,377 @@
 2018-06-19 11:38:29.501 PDT [1153] LOG:  startup process (PID 1154) exited with exit code 1
 2018-06-19 11:38:29.501 PDT [1153] LOG:  aborting startup due to startup process failure
 2018-06-19 11:38:29.502 PDT [1153] LOG:  database system is shut down
+2018-06-19 20:59:26.146 PDT [458] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 20:59:26.146 PDT [458] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:01:04.039 PDT [871] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 21:01:04.039 PDT [871] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 21:01:04.039 PDT [871] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 21:01:04.062 PDT [872] LOG:  database system was interrupted while in recovery at 2018-06-19 11:38:29 PDT
+2018-06-19 21:01:04.062 PDT [872] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 21:01:04.126 PDT [872] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 21:01:04.127 PDT [872] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 21:01:04.127 PDT [871] LOG:  startup process (PID 872) exited with exit code 1
+2018-06-19 21:01:04.127 PDT [871] LOG:  aborting startup due to startup process failure
+2018-06-19 21:01:04.129 PDT [871] LOG:  database system is shut down
+2018-06-19 21:01:06.905 PDT [875] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 21:01:06.905 PDT [875] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 21:01:06.906 PDT [875] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 21:01:06.920 PDT [876] LOG:  database system was interrupted while in recovery at 2018-06-19 21:01:04 PDT
+2018-06-19 21:01:06.920 PDT [876] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 21:01:06.971 PDT [876] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 21:01:06.972 PDT [876] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 21:01:06.972 PDT [875] LOG:  startup process (PID 876) exited with exit code 1
+2018-06-19 21:01:06.972 PDT [875] LOG:  aborting startup due to startup process failure
+2018-06-19 21:01:06.973 PDT [875] LOG:  database system is shut down
+2018-06-19 21:02:24.729 PDT [901] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 21:02:24.729 PDT [901] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 21:02:24.730 PDT [901] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 21:02:24.743 PDT [902] LOG:  database system was interrupted while in recovery at 2018-06-19 21:01:06 PDT
+2018-06-19 21:02:24.743 PDT [902] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 21:02:24.788 PDT [902] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 21:02:24.788 PDT [902] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 21:02:24.789 PDT [901] LOG:  startup process (PID 902) exited with exit code 1
+2018-06-19 21:02:24.789 PDT [901] LOG:  aborting startup due to startup process failure
+2018-06-19 21:02:24.791 PDT [901] LOG:  database system is shut down
+2018-06-19 21:02:29.448 PDT [907] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 21:02:29.448 PDT [907] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 21:02:29.449 PDT [907] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 21:02:29.461 PDT [908] LOG:  database system was interrupted while in recovery at 2018-06-19 21:02:24 PDT
+2018-06-19 21:02:29.461 PDT [908] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 21:02:29.515 PDT [908] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 21:02:29.515 PDT [908] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 21:02:29.515 PDT [907] LOG:  startup process (PID 908) exited with exit code 1
+2018-06-19 21:02:29.515 PDT [907] LOG:  aborting startup due to startup process failure
+2018-06-19 21:02:29.517 PDT [907] LOG:  database system is shut down
+2018-06-19 21:02:35.216 PDT [911] LOG:  listening on IPv6 address "::1", port 3305
+2018-06-19 21:02:35.216 PDT [911] LOG:  listening on IPv4 address "127.0.0.1", port 3305
+2018-06-19 21:02:35.217 PDT [911] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3305"
+2018-06-19 21:02:35.229 PDT [912] LOG:  database system was interrupted while in recovery at 2018-06-19 21:02:29 PDT
+2018-06-19 21:02:35.229 PDT [912] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 21:02:35.273 PDT [912] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 21:02:35.274 PDT [912] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 21:02:35.274 PDT [911] LOG:  startup process (PID 912) exited with exit code 1
+2018-06-19 21:02:35.274 PDT [911] LOG:  aborting startup due to startup process failure
+2018-06-19 21:02:35.276 PDT [911] LOG:  database system is shut down
+2018-06-19 21:09:25.891 PDT [1084] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:09:25.891 PDT [1084] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:14:32.518 PDT [1597] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:14:32.518 PDT [1597] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:14:49.303 PDT [1601] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:14:49.303 PDT [1601] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:15:08.077 PDT [1604] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:15:08.077 PDT [1604] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:15:27.216 PDT [1607] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:15:27.216 PDT [1607] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:19:59.671 PDT [1803] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:19:59.671 PDT [1803] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:20:10.156 PDT [1806] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:20:10.156 PDT [1806] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:20:14.184 PDT [1809] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:20:14.184 PDT [1809] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:32:04.243 PDT [1851] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:32:04.243 PDT [1851] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:45:09.587 PDT [1970] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:45:09.587 PDT [1970] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:46:19.542 PDT [2109] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:46:19.542 PDT [2109] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-19 21:47:26.344 PDT [2203] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-19 21:47:26.344 PDT [2203] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-19 21:47:26.344 PDT [2203] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-19 21:47:26.360 PDT [2204] LOG:  database system was interrupted while in recovery at 2018-06-19 21:02:35 PDT
+2018-06-19 21:47:26.360 PDT [2204] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 21:47:26.429 PDT [2204] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 21:47:26.430 PDT [2204] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 21:47:26.431 PDT [2203] LOG:  startup process (PID 2204) exited with exit code 1
+2018-06-19 21:47:26.431 PDT [2203] LOG:  aborting startup due to startup process failure
+2018-06-19 21:47:26.432 PDT [2203] LOG:  database system is shut down
+2018-06-19 21:47:27.735 PDT [2207] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-19 21:47:27.735 PDT [2207] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-19 21:47:27.735 PDT [2207] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-19 21:47:27.747 PDT [2208] LOG:  database system was interrupted while in recovery at 2018-06-19 21:47:26 PDT
+2018-06-19 21:47:27.747 PDT [2208] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-19 21:47:27.787 PDT [2208] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-19 21:47:27.787 PDT [2208] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-19 21:47:27.788 PDT [2207] LOG:  startup process (PID 2208) exited with exit code 1
+2018-06-19 21:47:27.788 PDT [2207] LOG:  aborting startup due to startup process failure
+2018-06-19 21:47:27.789 PDT [2207] LOG:  database system is shut down
+2018-06-19 21:54:06.889 PDT [447] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-19 21:54:06.889 PDT [447] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-20 06:01:00.827 PDT [451] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-20 06:01:00.827 PDT [451] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-20 06:15:31.909 PDT [871] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-20 06:15:31.909 PDT [871] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-20 06:15:50.762 PDT [898] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-20 06:15:50.762 PDT [898] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-20 06:15:50.763 PDT [898] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-20 06:15:50.789 PDT [899] LOG:  database system was interrupted while in recovery at 2018-06-19 21:47:27 PDT
+2018-06-20 06:15:50.789 PDT [899] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-20 06:15:50.848 PDT [899] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-20 06:15:50.849 PDT [899] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-20 06:15:50.850 PDT [898] LOG:  startup process (PID 899) exited with exit code 1
+2018-06-20 06:15:50.850 PDT [898] LOG:  aborting startup due to startup process failure
+2018-06-20 06:15:50.851 PDT [898] LOG:  database system is shut down
+2018-06-20 06:27:44.264 PDT [1030] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-20 06:27:44.264 PDT [1030] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-20 06:27:46.145 PDT [1033] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-20 06:27:46.145 PDT [1033] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-20 06:30:42.157 PDT [1055] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-20 06:30:42.157 PDT [1055] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-20 06:30:44.250 PDT [1058] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-20 06:30:44.250 PDT [1058] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-20 07:28:35.303 PDT [492] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-20 07:28:35.303 PDT [492] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-20 15:12:20.411 PDT [449] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-20 15:12:20.411 PDT [449] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-20 18:55:05.445 PDT [460] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-20 18:55:05.445 PDT [460] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-20 21:28:33.811 PDT [446] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-20 21:28:33.811 PDT [446] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-21 05:19:34.083 PDT [511] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-21 05:19:34.083 PDT [511] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 14:58:32.488 PDT [453] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 14:58:32.488 PDT [453] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 15:01:46.158 PDT [804] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 15:01:46.158 PDT [804] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 15:01:50.470 PDT [808] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 15:01:50.470 PDT [808] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 15:02:24.168 PDT [864] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 15:02:24.168 PDT [864] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 15:02:24.169 PDT [864] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 15:02:24.192 PDT [865] LOG:  database system was interrupted while in recovery at 2018-06-20 06:15:50 PDT
+2018-06-23 15:02:24.192 PDT [865] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 15:02:24.234 PDT [865] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 15:02:24.235 PDT [865] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 15:02:24.236 PDT [864] LOG:  startup process (PID 865) exited with exit code 1
+2018-06-23 15:02:24.236 PDT [864] LOG:  aborting startup due to startup process failure
+2018-06-23 15:02:24.237 PDT [864] LOG:  database system is shut down
+2018-06-23 15:02:25.259 PDT [868] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 15:02:25.259 PDT [868] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 15:02:25.260 PDT [868] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 15:02:25.272 PDT [869] LOG:  database system was interrupted while in recovery at 2018-06-23 15:02:24 PDT
+2018-06-23 15:02:25.272 PDT [869] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 15:02:25.311 PDT [869] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 15:02:25.311 PDT [869] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 15:02:25.312 PDT [868] LOG:  startup process (PID 869) exited with exit code 1
+2018-06-23 15:02:25.312 PDT [868] LOG:  aborting startup due to startup process failure
+2018-06-23 15:02:25.313 PDT [868] LOG:  database system is shut down
+2018-06-23 15:02:56.353 PDT [872] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 15:02:56.354 PDT [872] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 15:02:56.354 PDT [872] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 15:02:56.366 PDT [873] LOG:  database system was interrupted while in recovery at 2018-06-23 15:02:25 PDT
+2018-06-23 15:02:56.366 PDT [873] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 15:02:56.406 PDT [873] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 15:02:56.406 PDT [873] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 15:02:56.407 PDT [872] LOG:  startup process (PID 873) exited with exit code 1
+2018-06-23 15:02:56.407 PDT [872] LOG:  aborting startup due to startup process failure
+2018-06-23 15:02:56.408 PDT [872] LOG:  database system is shut down
+2018-06-23 15:20:23.709 PDT [1292] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 15:20:23.709 PDT [1292] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 15:27:11.435 PDT [1497] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 15:27:11.435 PDT [1497] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 15:37:21.475 PDT [2113] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 15:37:21.475 PDT [2113] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 15:37:30.672 PDT [2176] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 15:37:30.672 PDT [2176] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 15:37:37.332 PDT [2185] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 15:37:37.332 PDT [2185] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 15:37:39.900 PDT [2188] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 15:37:39.900 PDT [2188] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 15:38:55.471 PDT [2426] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 15:38:55.471 PDT [2426] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 15:38:55.472 PDT [2426] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 15:38:55.486 PDT [2427] LOG:  database system was interrupted while in recovery at 2018-06-23 15:02:56 PDT
+2018-06-23 15:38:55.486 PDT [2427] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 15:38:55.528 PDT [2427] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 15:38:55.530 PDT [2427] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 15:38:55.530 PDT [2426] LOG:  startup process (PID 2427) exited with exit code 1
+2018-06-23 15:38:55.531 PDT [2426] LOG:  aborting startup due to startup process failure
+2018-06-23 15:38:55.532 PDT [2426] LOG:  database system is shut down
+2018-06-23 15:38:56.663 PDT [2431] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 15:38:56.664 PDT [2431] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 15:38:56.664 PDT [2431] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 15:38:56.677 PDT [2432] LOG:  database system was interrupted while in recovery at 2018-06-23 15:38:55 PDT
+2018-06-23 15:38:56.677 PDT [2432] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 15:38:56.715 PDT [2432] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 15:38:56.715 PDT [2432] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 15:38:56.716 PDT [2431] LOG:  startup process (PID 2432) exited with exit code 1
+2018-06-23 15:38:56.716 PDT [2431] LOG:  aborting startup due to startup process failure
+2018-06-23 15:38:56.717 PDT [2431] LOG:  database system is shut down
+2018-06-23 15:39:08.499 PDT [2459] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 15:39:08.499 PDT [2459] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 15:39:08.500 PDT [2459] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 15:39:08.513 PDT [2460] LOG:  database system was interrupted while in recovery at 2018-06-23 15:38:56 PDT
+2018-06-23 15:39:08.513 PDT [2460] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 15:39:08.561 PDT [2460] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 15:39:08.561 PDT [2460] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 15:39:08.562 PDT [2459] LOG:  startup process (PID 2460) exited with exit code 1
+2018-06-23 15:39:08.562 PDT [2459] LOG:  aborting startup due to startup process failure
+2018-06-23 15:39:08.564 PDT [2459] LOG:  database system is shut down
+2018-06-23 15:39:13.797 PDT [2463] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 15:39:13.797 PDT [2463] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 15:39:13.798 PDT [2463] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 15:39:13.812 PDT [2464] LOG:  database system was interrupted while in recovery at 2018-06-23 15:39:08 PDT
+2018-06-23 15:39:13.812 PDT [2464] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 15:39:13.859 PDT [2464] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 15:39:13.859 PDT [2464] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 15:39:13.860 PDT [2463] LOG:  startup process (PID 2464) exited with exit code 1
+2018-06-23 15:39:13.860 PDT [2463] LOG:  aborting startup due to startup process failure
+2018-06-23 15:39:13.861 PDT [2463] LOG:  database system is shut down
+2018-06-23 16:17:56.372 PDT [3198] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 16:17:56.372 PDT [3198] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 16:18:38.630 PDT [3277] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 16:18:38.630 PDT [3277] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 16:18:45.063 PDT [3282] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 16:18:45.063 PDT [3282] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 16:18:47.371 PDT [3285] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 16:18:47.371 PDT [3285] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 16:23:08.868 PDT [3553] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 16:23:08.868 PDT [3553] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 17:59:26.030 PDT [4238] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 17:59:26.030 PDT [4238] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 18:01:24.937 PDT [4375] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 18:01:24.937 PDT [4375] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 18:06:06.204 PDT [5018] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 18:06:06.204 PDT [5018] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 18:06:26.086 PDT [5085] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 18:06:26.086 PDT [5085] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 18:06:26.087 PDT [5085] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 18:06:26.099 PDT [5086] LOG:  database system was interrupted while in recovery at 2018-06-23 15:39:13 PDT
+2018-06-23 18:06:26.099 PDT [5086] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 18:06:26.144 PDT [5086] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 18:06:26.145 PDT [5086] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 18:06:26.145 PDT [5085] LOG:  startup process (PID 5086) exited with exit code 1
+2018-06-23 18:06:26.145 PDT [5085] LOG:  aborting startup due to startup process failure
+2018-06-23 18:06:26.147 PDT [5085] LOG:  database system is shut down
+2018-06-23 18:06:26.975 PDT [5089] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 18:06:26.975 PDT [5089] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 18:06:26.976 PDT [5089] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 18:06:26.990 PDT [5090] LOG:  database system was interrupted while in recovery at 2018-06-23 18:06:26 PDT
+2018-06-23 18:06:26.990 PDT [5090] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 18:06:27.036 PDT [5090] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 18:06:27.036 PDT [5090] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 18:06:27.037 PDT [5089] LOG:  startup process (PID 5090) exited with exit code 1
+2018-06-23 18:06:27.037 PDT [5089] LOG:  aborting startup due to startup process failure
+2018-06-23 18:06:27.038 PDT [5089] LOG:  database system is shut down
+2018-06-23 18:06:32.361 PDT [5093] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 18:06:32.361 PDT [5093] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 18:06:32.362 PDT [5093] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 18:06:32.376 PDT [5094] LOG:  database system was interrupted while in recovery at 2018-06-23 18:06:27 PDT
+2018-06-23 18:06:32.376 PDT [5094] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 18:06:32.417 PDT [5094] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 18:06:32.418 PDT [5094] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 18:06:32.418 PDT [5093] LOG:  startup process (PID 5094) exited with exit code 1
+2018-06-23 18:06:32.419 PDT [5093] LOG:  aborting startup due to startup process failure
+2018-06-23 18:06:32.420 PDT [5093] LOG:  database system is shut down
+2018-06-23 18:15:59.179 PDT [5615] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 18:15:59.179 PDT [5615] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 18:16:20.141 PDT [5794] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 18:16:20.141 PDT [5794] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 18:16:23.240 PDT [5800] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 18:16:23.240 PDT [5800] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 18:16:27.710 PDT [5805] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 18:16:27.710 PDT [5805] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 18:16:38.881 PDT [5809] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 18:16:38.881 PDT [5809] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 18:20:34.671 PDT [5956] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 18:20:34.671 PDT [5956] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 18:20:34.672 PDT [5956] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 18:20:34.686 PDT [5957] LOG:  database system was interrupted while in recovery at 2018-06-23 18:06:32 PDT
+2018-06-23 18:20:34.686 PDT [5957] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 18:20:34.728 PDT [5957] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 18:20:34.728 PDT [5957] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 18:20:34.729 PDT [5956] LOG:  startup process (PID 5957) exited with exit code 1
+2018-06-23 18:20:34.729 PDT [5956] LOG:  aborting startup due to startup process failure
+2018-06-23 18:20:34.730 PDT [5956] LOG:  database system is shut down
+2018-06-23 18:20:35.798 PDT [5962] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 18:20:35.798 PDT [5962] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 18:20:35.799 PDT [5962] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 18:20:35.816 PDT [5963] LOG:  database system was interrupted while in recovery at 2018-06-23 18:20:34 PDT
+2018-06-23 18:20:35.816 PDT [5963] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 18:20:35.858 PDT [5963] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 18:20:35.858 PDT [5963] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 18:20:35.858 PDT [5962] LOG:  startup process (PID 5963) exited with exit code 1
+2018-06-23 18:20:35.858 PDT [5962] LOG:  aborting startup due to startup process failure
+2018-06-23 18:20:35.859 PDT [5962] LOG:  database system is shut down
+2018-06-23 18:20:43.546 PDT [5967] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 18:20:43.546 PDT [5967] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 18:20:43.547 PDT [5967] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 18:20:43.560 PDT [5968] LOG:  database system was interrupted while in recovery at 2018-06-23 18:20:35 PDT
+2018-06-23 18:20:43.560 PDT [5968] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 18:20:43.601 PDT [5968] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 18:20:43.601 PDT [5968] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 18:20:43.602 PDT [5967] LOG:  startup process (PID 5968) exited with exit code 1
+2018-06-23 18:20:43.602 PDT [5967] LOG:  aborting startup due to startup process failure
+2018-06-23 18:20:43.603 PDT [5967] LOG:  database system is shut down
+2018-06-23 18:28:26.415 PDT [6188] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-23 18:28:26.415 PDT [6188] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-23 18:28:55.766 PDT [6257] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-23 18:28:55.766 PDT [6257] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-23 18:28:55.767 PDT [6257] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-23 18:28:55.783 PDT [6258] LOG:  database system was interrupted while in recovery at 2018-06-23 18:20:43 PDT
+2018-06-23 18:28:55.783 PDT [6258] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-23 18:28:55.836 PDT [6258] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-23 18:28:55.836 PDT [6258] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-23 18:28:55.838 PDT [6257] LOG:  startup process (PID 6258) exited with exit code 1
+2018-06-23 18:28:55.838 PDT [6257] LOG:  aborting startup due to startup process failure
+2018-06-23 18:28:55.839 PDT [6257] LOG:  database system is shut down
+2018-06-24 06:46:18.672 PDT [518] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-24 06:46:18.673 PDT [518] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-24 06:46:18.673 PDT [518] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-24 06:46:18.701 PDT [519] LOG:  database system was interrupted while in recovery at 2018-06-23 18:28:55 PDT
+2018-06-24 06:46:18.701 PDT [519] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-24 06:46:18.836 PDT [519] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-24 06:46:18.836 PDT [519] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-24 06:46:18.837 PDT [518] LOG:  startup process (PID 519) exited with exit code 1
+2018-06-24 06:46:18.837 PDT [518] LOG:  aborting startup due to startup process failure
+2018-06-24 06:46:18.838 PDT [518] LOG:  database system is shut down
+2018-06-24 06:46:43.469 PDT [598] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-24 06:46:43.469 PDT [598] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-24 06:46:43.471 PDT [598] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-24 06:46:43.651 PDT [599] LOG:  database system was interrupted while in recovery at 2018-06-24 06:46:18 PDT
+2018-06-24 06:46:43.651 PDT [599] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-24 06:46:44.362 PDT [599] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-24 06:46:44.363 PDT [599] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-24 06:46:44.366 PDT [598] LOG:  startup process (PID 599) exited with exit code 1
+2018-06-24 06:46:44.366 PDT [598] LOG:  aborting startup due to startup process failure
+2018-06-24 06:46:44.369 PDT [598] LOG:  database system is shut down
+2018-06-24 07:04:49.125 PDT [1025] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-24 07:04:49.125 PDT [1025] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-24 07:04:51.788 PDT [1029] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-24 07:04:51.788 PDT [1029] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-24 07:05:01.913 PDT [1032] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-24 07:05:01.913 PDT [1032] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-24 07:19:23.102 PDT [1288] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-24 07:19:23.102 PDT [1288] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-24 07:22:24.169 PDT [1671] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-24 07:22:24.169 PDT [1671] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-24 07:22:28.533 PDT [1674] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-24 07:22:28.533 PDT [1674] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-24 07:25:34.446 PDT [1888] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-24 07:25:34.446 PDT [1888] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-24 07:25:47.117 PDT [1921] LOG:  listening on IPv6 address "::1", port 3304
+2018-06-24 07:25:47.117 PDT [1921] LOG:  listening on IPv4 address "127.0.0.1", port 3304
+2018-06-24 07:25:47.118 PDT [1921] LOG:  listening on Unix socket "/tmp/.s.PGSQL.3304"
+2018-06-24 07:25:47.141 PDT [1922] LOG:  database system was interrupted while in recovery at 2018-06-24 06:46:44 PDT
+2018-06-24 07:25:47.141 PDT [1922] HINT:  This probably means that some data is corrupted and you will have to use the last backup for recovery.
+2018-06-24 07:25:47.186 PDT [1922] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-24 07:25:47.188 PDT [1922] FATAL:  could not open directory "pg_stat_tmp": No such file or directory
+2018-06-24 07:25:47.189 PDT [1921] LOG:  startup process (PID 1922) exited with exit code 1
+2018-06-24 07:25:47.189 PDT [1921] LOG:  aborting startup due to startup process failure
+2018-06-24 07:25:47.190 PDT [1921] LOG:  database system is shut down
+2018-06-25 05:28:39.598 PDT [440] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-25 05:28:39.598 PDT [440] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-25 12:23:52.923 PDT [505] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-25 12:23:52.923 PDT [505] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-25 19:00:05.410 PDT [485] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-25 19:00:05.410 PDT [485] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-26 06:38:20.057 PDT [855] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-26 06:38:20.057 PDT [855] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-26 16:11:23.530 PDT [454] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-26 16:11:23.530 PDT [454] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-26 22:03:21.213 PDT [441] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-26 22:03:21.213 PDT [441] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-27 12:17:45.073 PDT [516] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-27 12:17:45.073 PDT [516] DETAIL:  Permissions should be u=rwx (0700).
+2018-06-27 15:39:51.658 PDT [449] FATAL:  data directory "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/data" has group or world access
+2018-06-27 15:39:51.658 PDT [449] DETAIL:  Permissions should be u=rwx (0700).

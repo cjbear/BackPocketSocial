@@ -11,6 +11,12 @@ import calendar
 
 class EditProfileForm(FlaskForm):
     username = StringField(_l('Username'), validators=[DataRequired()])
+    firstName = TextAreaField(_l('First Name'),
+                             validators=[Length(min=0, max=140)])
+    lastName = TextAreaField(_l('Last Name'),
+                             validators=[Length(min=0, max=140)])
+    mobileNumber = TextAreaField(_l('Mobile Number'),
+                             validators=[Length(min=0, max=140)])
     about_me = TextAreaField(_l('About me'),
                              validators=[Length(min=0, max=140)])
     submit = SubmitField(_l('Submit'))
