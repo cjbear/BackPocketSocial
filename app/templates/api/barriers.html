@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block html_attribs %} lang="en"{% endblock %}
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css"> -->
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+
+    <!-- Material Design fonts -->
+    <!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">-->
+
+    <!-- Bootstrap Material Design -->
+    <!--<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@0.5.10/dist/css/bootstrap-material-design.css" />
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@0.5.10/dist/css/ripples.css" />
+    <script src="https://unpkg.com/bootstrap-material-design@0.5.10/dist/js/material.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@0.5.10/dist/js/ripples.js"></script>-->
+
+
+{% block scripts %}
+
+  
+    <title>Example of setting and getting results into/from the survey, jQuery Survey Library Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://surveyjs.azureedge.net/1.0.29/survey.jquery.min.js"></script>
+    <script src="https://surveyjs.azureedge.net/1.0.29/survey.jquery.js"></script>
+    <link href="https://surveyjs.azureedge.net/1.0.29/survey.css" type="text/css" rel="stylesheet"/>
+
+
+    <script> 
+
+    function sendDataToServer(survey) {
+        //Add hidden fields to result from survey
+        data = survey.data;
+        data.survey_location = $('#survey_location').val();
+        data.survey_date = $('#survey_date').val();
+        data.survey_time = $('#survey_time').val(); 
+        data.volunteer = $('#volunteer').val();
+        //Send data to server
+        $.post("{{ url_for('api.barriersCompleted') }}", data);
+    }
+    $(document).ready(function() {
+        Survey.Survey.cssType = "bootstrap";
+        var survey = new Survey.Survey(surveyData, "surveyResult");
+        //Use onComplete event to save the data           
+        survey.onComplete.add(sendDataToServer);
+    });
+
+
+$("#surveyElement").Survey({model: survey});
+
+</script>
+
+<script src="{{ url_for('static', filename='barriers.js') }}"></script>
+
+{{super()}}
+{% endblock %}
+
+{% block app_content %}
+    <head>
+        <title>What are your barriers?</title>
+    </head>
+
+    <div id="surveyElement"></div> 
+    <div id="surveyResult"></div> 
+            
+{% endblock %}

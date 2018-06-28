@@ -9,6 +9,7 @@
     <div>{{assignment["unlock_at"]}}</div>
     <div>{{assignment["lock_at"]}}</div>
   {% endfor %}
+  <button id="getAssignBtn" href="{{ url_for('canvas.getAssignments', username=current_user.username) }}">Get Your Assignments</button>
   {% endblock %}
 </body>
 </html>
