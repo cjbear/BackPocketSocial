@@ -1,23 +1,22 @@
 #surveys routes.py
 
+import json
 from datetime import datetime
+
+from flask import jsonify
 from flask import render_template, flash, redirect, url_for, request, g, \
     jsonify, current_app
 from flask_login import current_user, login_required
 from flask_security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin, login_required
 from flask_sqlalchemy import SQLAlchemy
-from flask_babel import _, get_locale
-#from guess_language import guess_language
+
+from app.api import bp
 from app import db
-#from app.api.forms import [insert relevant api/forms here ]
-from app.models import User, FyGoals
-from app.translate import translate
 from app.api import bp
-import json
-from flask import jsonify
 
+from app.models.User import User
+from app.models.FyGoalModel import FyGoalModel
 
-from app.api import bp
 
 @bp.route('/menu', methods=['GET'])
 def menu():
@@ -27,29 +26,40 @@ def menu():
 def fygoals():
     return render_template('api/fyGoals.html')
 
-@bp.route('/fygoalsCompleted', methods=['GET', 'POST'])
-def get_fygoal(id):
-    if request.method == 'POST':
-        fyGoalResult = request.get_json()
-        fyGoalData = fyGoalResponse.json()
-        for key, value in fyGoalData.items():
+@bp.route('/fygoal/<username>', methods=['GET', 'POST'])
+def add_fygoal(username):
+    json_data = request.get_json()
+    if not json_data:
+        return jsonify({'message': 'No input data provided'}), 400
+    try:
+        data = fygoal_schema.load(json_data)
+    except ValidationError as err:
+        return jsonify(err.messages), 422
+
+    for key, value in fyGoalData.items():
             if not value:
                 return jsonify({'error': 'value for {} is empty'.format(key)})
-        new_fygoal = FyGoals(
-            FirstDraftGoal  = ['pages']['name']['page1']['elements']['name']['FirstDraftGoal'],
-            startDate       = ['pages']['name']['page1']['elements']['name']['startDate'],
-            endDate         = ['pages']['name']['page1']['elements']['name']['endDate'],
-            specific_fy01   = ['pages']['name']['page2']['elements']['name']['specific_fy01'],
-            measurable_fy01 = ['pages']['name']['page2']['elements']['name']['measurable_fy01'],
-            achievable_fy01 = ['pages']['name']['page2']['elements']['name']['achievable_fy01'],
-            relevant_fy01   = ['pages']['name']['page2']['elements']['name']['relevant_fy01'],
-            timely_fy01     = ['pages']['name']['page2']['elements']['name']['timely_fy01'],
-            finalGoal_fy01  = ['pages']['name']['page3']['elements']['name']['finalGoal_fy01']
-            )
-        db.session.add(new_fygoal)
-        db.session.commit()
+            new_fygoal = FyGoals(
+                FirstDraftGoal  = ['pages']['name']['page1']['elements']['name']['FirstDraftGoal'],
+                startDate       = ['pages']['name']['page1']['elements']['name']['startDate'],
+                endDate         = ['pages']['name']['page1']['elements']['name']['endDate'],
+                specific_fy01   = ['pages']['name']['page2']['elements']['name']['specific_fy01'],
+                measurable_fy01 = ['pages']['name']['page2']['elements']['name']['measurable_fy01'],
+                achievable_fy01 = ['pages']['name']['page2']['elements']['name']['achievable_fy01'],
+                relevant_fy01   = ['pages']['name']['page2']['elements']['name']['relevant_fy01'],
+                timely_fy01     = ['pages']['name']['page2']['elements']['name']['timely_fy01'],
+                finalGoal_fy01  = ['pages']['name']['page3']['elements']['name']['finalGoal_fy01'],
+                author = current_user
+                )
+            db.session.add(new_fygoal)
+            db.session.commit()
+            result = fygoal_schema.dump(FyGoalModel.query.get(fygoal.id))
+            return jsonify({
+                'message': 'Your goal is saved.',
+                'new_fygoal': result,
+        })
 
-    return render_template('api/fyGoalsResults.html')
+    return render_template('api/fyGoalResult.html')
 
 
 @bp.route('/barriers', methods=['GET'])

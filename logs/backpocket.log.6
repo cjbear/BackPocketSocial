@@ -1,4 +1,4 @@
-2018-06-27 16:37:26,507 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
+2018-07-24 10:08:40,185 ERROR: Exception on / [POST] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,12 +12,23 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
-2018-06-27 16:37:36,502 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/auth/routes.py", line 27, in login
+    next_page = url_for('main.login')
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.login'. Did you mean 'auth.login' instead?
+2018-07-24 10:09:25,082 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:10:31,825 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:12:04,792 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:12:24,256 ERROR: Exception on / [POST] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -31,65 +42,29 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
-2018-06-27 16:37:46,507 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/auth/routes.py", line 27, in login
+    next_page = url_for('main.login')
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
     reraise(exc_type, exc_value, tb)
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
     raise value
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
-2018-06-27 16:37:56,507 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
-2018-06-27 16:38:06,508 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.login'. Did you mean 'auth.login' instead?
+2018-07-24 10:13:32,848 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:15:57,362 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:17:26,879 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:22:44,672 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:24:00,328 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:26:27,205 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:27:30,169 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:28:45,523 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:30:33,762 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:32:46,501 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:37:32,581 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:38:42,280 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 10:43:48,234 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]

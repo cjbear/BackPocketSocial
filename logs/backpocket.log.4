@@ -1,58 +1,33 @@
-2018-06-27 16:39:06,506 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
-2018-06-27 16:39:16,511 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
-2018-06-27 16:39:26,507 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
-2018-06-27 16:39:35,757 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 18:52:06,508 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 18:54:11,225 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 18:56:59,478 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 18:58:16,037 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 18:58:50,893 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:00:53,335 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:01:18,587 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:06:57,852 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:09:40,962 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:12:04,917 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:14:46,083 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:15:41,493 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:18:21,503 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:19:14,166 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:20:13,431 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:22:33,033 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:23:30,557 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:24:19,498 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:25:08,362 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 19:34:42,419 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 21:21:26,485 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 21:40:32,679 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 21:47:15,787 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 21:48:29,024 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 21:50:55,912 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 22:32:38,372 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 22:55:38,588 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 22:58:20,648 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 23:00:42,651 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 23:05:20,936 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-24 23:12:33,928 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 07:32:03,635 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 08:22:50,834 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]

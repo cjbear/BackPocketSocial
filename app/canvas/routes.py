@@ -12,9 +12,10 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_babel import _, get_locale
 #from guess_language import guess_language
 from app import db
-from app.models import User, Assignments
-from app.translate import translate
 from app.canvas import bp
+
+from app.models.User import User
+from app.models.AssignmentModel import AssignmentModel
 
 course_id = 12345
 API_URL = 'https://canvas.instructure.com/api/v1/'
@@ -30,7 +31,7 @@ def getAssignments():
     response = requests.get(url, headers = headers, params=params)
     assignments = response.json()
     for assignment in assignments:
-        assignment = Assignments(description=assignment.description, due_at = assignment.due_at, unlock_at = assignment.unlock_at,
+        assignment = AssignmentModel(description=assignment.description, due_at = assignment.due_at, unlock_at = assignment.unlock_at,
             lock_at = assignment.lock_at, author=current_user) 
         db.session.commit()
         flash(_('Your assignments are saved.'))
@@ -40,7 +41,7 @@ def getAssignments():
 def showAssignments(username):
     user = User.query.filter_by(username=username).first_or_404()
     page = request.args.get('page', 1, type=int)
-    assignments = user.assignments.order_by(Assignments.timestamp.desc()).paginate(page, current_app.config['ASSIGNMENTS_PER_PAGE'], False)
+    assignments = user.assignments.order_by(AssignmentModel.timestamp.desc()).paginate(page, current_app.config['ASSIGNMENTS_PER_PAGE'], False)
     next_url = url_for('main.user', username=user.username, page=assignments.next_num) if assignments.has_next else None
     prev_url = url_for('main.user', username=user.username, page=assignments.prev_num) if assignments.has_prev else None
     return render_template('canvas/showAssignments.html', user=user, assignments=assignments.items,

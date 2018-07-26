@@ -1,17 +1,27 @@
 {% extends 'base.html' %}
 {% import 'bootstrap/wtf.html' as wtf %}
 
+
 {% block app_content %}
-    <h1>{{ _('Sign In') }}</h1>
-    <div class="row">
-        <div class="col-md-4">
-            {{ wtf.quick_form(form) }}
+
+
+    <div class="container" display="flex" flex-wrap="nowrap" justify-content="space-between">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>BackPocket</h2>
+                <p>A mobile organization tool that helps college students set long- and short-term SMART goals, create action plans, and track progress.</p>
+            </div>
+            <div class="col-md-6">
+            <h2>{{ _('Sign In') }}</h2>
+            {{ wtf.quick_form(form) }} 
+            <br>
+            <p>{{ _('New User?') }} <a href="{{ url_for('auth.register') }}">{{ _('Create a New Account') }}</a></p>
+            <p>
+            {{ _('Forgot Your Password?') }}
+            <a href="{{ url_for('auth.reset_password_request') }}">{{ _('Click to Reset It') }}</a></p>
+            </div>
         </div>
     </div>
-    <br>
-    <p>{{ _('New User?') }} <a href="{{ url_for('auth.register') }}">{{ _('Click to Register!') }}</a></p>
-    <p>
-        {{ _('Forgot Your Password?') }}
-        <a href="{{ url_for('auth.reset_password_request') }}">{{ _('Click to Reset It') }}</a>
-    </p>
+
+
 {% endblock %}

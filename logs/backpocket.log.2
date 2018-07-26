@@ -1,12 +1,4 @@
-2018-06-27 17:49:35,496 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 17:54:35,993 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 17:58:31,949 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 17:59:23,065 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:01:36,082 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:03:09,121 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:05:23,821 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:06:17,065 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:06:20,968 ERROR: Exception on /api/menu [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
+2018-07-25 08:23:09,398 ERROR: Exception on /index [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -20,8 +12,10 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/api/routes.py", line 24, in menu
-    return render_template('api/menu.html')
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/main/routes.py", line 29, in index
+    return render_template('main/index.html', title='Home')
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
     context, ctx.app)
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
@@ -34,27 +28,30 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/templates/api/menu.html", line 2, in top-level template code
-    {% extends "menu_base.html" %}
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/templates/menu_base.html", line 2, in top-level template code
-    {% extends 'base.html' %}
-jinja2.exceptions.TemplateRuntimeError: extended multiple times
-2018-06-27 18:06:48,485 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:07:35,856 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:10:56,468 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:19:16,801 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:20:32,724 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:22:30,767 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:24:14,849 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:25:06,038 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:25:32,852 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:31:16,878 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:31:49,503 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:32:17,790 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:33:42,475 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:36:03,157 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:36:29,930 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:37:39,228 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:38:27,175 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:39:04,212 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
-2018-06-27 18:40:33,720 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/templates/main/index.html", line 3, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/templates/base.html", line 3, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block "body"
+    {% block navbar %}
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/templates/base.html", line 31, in block "navbar"
+    <li><a href="{{ url_for('api.goals') }}">{{ _('Goals') }}</a></li>
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'api.goals'. Did you mean 'api.fygoals' instead?
+2018-07-25 08:25:49,392 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 09:13:00,602 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]

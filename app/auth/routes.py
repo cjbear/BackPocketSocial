@@ -6,10 +6,11 @@ from app import db
 from app.auth import bp
 from app.auth.forms import LoginForm, RegistrationForm, \
     ResetPasswordRequestForm, ResetPasswordForm
-from app.models import User
+from app.models.User import User
 from app.auth.email import send_password_reset_email
 
 
+@bp.route('/', methods=['GET', 'POST'])
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -32,7 +33,6 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('main.index'))
-
 
 @bp.route('/register', methods=['GET', 'POST'])
 def register():

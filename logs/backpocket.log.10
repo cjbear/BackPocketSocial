@@ -1,95 +1,82 @@
-2018-06-27 16:35:22,278 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
+2018-07-24 09:22:58,932 ERROR: Exception on /todo/ [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1791, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1774, in raise_routing_exception
+    raise request.routing_exception
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/ctx.py", line 336, in match_request
+    self.url_adapter.match(return_rule=True)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/werkzeug/routing.py", line 1581, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
+    return handler(e)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/errors/handlers.py", line 8, in not_found_error
+    return render_template('errors/404.html'), 404
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
-2018-06-27 16:35:32,278 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/templates/base.html", line 67, in template
+    {% endblock %}
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/templates/errors/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
-2018-06-27 16:35:42,273 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
-2018-06-27 16:35:52,271 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
-2018-06-27 16:36:02,273 ERROR: Exception on /notifications [GET] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 57, in notifications
-    Notification.timestamp > since).order_by(Notification.timestamp.asc())
-NameError: name 'Notification' is not defined
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/templates/base.html", line 67, in template
+    {% endblock %}
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 223, in parse_if
+    drop_needle=True)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 144, in parse_statement
+    self.fail_unknown_tag(token.value, token.lineno)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 97, in fail_unknown_tag
+    return self._fail_ut_eof(name, self._end_token_stack, lineno)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 90, in _fail_ut_eof
+    self.fail(' '.join(message), lineno)
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/jinja2/parser.py", line 59, in fail
+    raise exc(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'endif'. The innermost block that needs to be closed is 'if'.

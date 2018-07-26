@@ -1,4 +1,4 @@
-2018-06-27 19:53:46,753 ERROR: Exception on /add_todo/Chris [POST] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
+2018-07-25 10:01:41,323 ERROR: Exception on /add_todo/Enzo [POST] [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,7 +14,7 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 127, in add_todo
+  File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/communications/routes.py", line 129, in add_todo
     db.session.commit()
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
     return getattr(self.registry(), name)(*args, **kwargs)
@@ -38,4 +38,29 @@ Traceback (most recent call last):
     self.session._register_newly_persistent(other)
   File "/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1694, in _register_newly_persistent
     % state_str(state)
-sqlalchemy.orm.exc.FlushError: Instance <Task at 0x10f887e48> has a NULL identity key.  If this is an auto-generated value, check that the database table allows generation of new primary key values, and that the mapped Column object is configured to expect these generated values.  Ensure also that this flush() is not occurring at an inappropriate time, such as within a load() event.
+sqlalchemy.orm.exc.FlushError: Instance <TaskModel at 0x10f9d8fd0> has a NULL identity key.  If this is an auto-generated value, check that the database table allows generation of new primary key values, and that the mapped Column object is configured to expect these generated values.  Ensure also that this flush() is not occurring at an inappropriate time, such as within a load() event.
+2018-07-25 11:20:43,503 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:21:50,777 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:22:42,069 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:23:18,773 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:24:38,574 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:25:28,048 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:26:04,519 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:26:54,511 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:27:47,735 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:29:30,177 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:31:24,228 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:32:16,824 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:33:56,428 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:34:57,638 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:35:58,740 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:36:50,682 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:37:57,482 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:41:39,268 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:49:22,486 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:50:05,059 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:50:50,724 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:52:01,065 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:52:55,727 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:53:31,698 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]
+2018-07-25 11:55:27,172 INFO: BackPocket startup [in /Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/__init__.py:95]

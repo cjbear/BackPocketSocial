@@ -8,9 +8,12 @@ from flask_babel import _, get_locale
 #from guess_language import guess_language
 from app import db
 from app.main.forms import EditProfileForm, SearchForm
-from app.models import User, Post, Task
 from app.translate import translate
 from app.main import bp
+
+from app.models.User import User
+from app.models.PostModel import PostModel
+from app.models.TaskModel import TaskModel
 
 @bp.before_app_request
 def before_request():
@@ -20,17 +23,17 @@ def before_request():
         g.search_form = SearchForm()
     g.locale = str(get_locale())
 
-@bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index', methods=['GET', 'POST'])
+@login_required
 def index():
-     return render_template('index.html', title='Home')
+     return render_template('main/index.html', title='Home')
 
 @bp.route('/user/<username>')
 @login_required
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     page = request.args.get('page', 1, type=int)
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+    posts = user.posts.order_by(PostModel.timestamp.desc()).paginate(
         page, current_app.config['POSTS_PER_PAGE'], False)
     next_url = url_for('main.user', username=user.username,
                        page=posts.next_num) if posts.has_next else None

@@ -22,16 +22,22 @@
                         <th scope="col">Task</th>
                         <th scope="col">Due Date</th>
                         <th scope="col">Priority</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                
                     <tr>
+                        {% if tasks %}
                         {% for task in tasks %}
-                        <th scope="row" span id="task{{ task.id }}">{{ task.todo_name }}</span></th>
-                        <td>{{ task.todo_priority }}</td>
-                        <td>{{ task.due_date }}</td>
+                        <tr class="active">
+                                <td> <a href="{{ url_for('communications.menu') }}">{{ task.todo_name }}</span></td>
+                                <td>{{ task.todo_priority }}</td>
+                                <td>{{ task.due_date }}</td>
+                                <button type="submit" class="btn btn-success">Done</button>
+                        </tr>
+
                         {% endfor %}
+                        {% endif %}
                     </tr>
                 </tbody>
             </table>

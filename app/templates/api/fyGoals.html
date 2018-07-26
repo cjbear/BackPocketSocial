@@ -29,25 +29,21 @@
     
     <script> 
 
-    function sendDataToServer(survey) {
+    function sendDataToServer(fyGoal) {
         //Add hidden fields to result from survey
         data = survey.data;
-        data.survey_location = $('#survey_location').val();
-        data.survey_date = $('#survey_date').val();
-        data.survey_time = $('#survey_time').val(); 
-        data.volunteer = $('#volunteer').val();
         //Send data to server
-        $.post("{{ url_for('api.fygoals') }}", data);
+        $.post("{{ url_for('api.fygoal') }}", data);
     }
     $(document).ready(function() {
         Survey.Survey.cssType = "bootstrap";
-        var survey = new Survey.Survey(surveyData, "surveyResult");
+        var fyGoal = new Survey.Survey(data, "fyGoalResult");
         //Use onComplete event to save the data           
         survey.onComplete.add(sendDataToServer);
     });
 
 
-$("#surveyElement").Survey({model: survey});
+$("#fyGoalElement").Survey({model: survey});
 
 </script>
 
@@ -61,8 +57,8 @@ $("#surveyElement").Survey({model: survey});
         <title>First Year SMART Goals</title>
     </head>
 
-    <div id="surveyElement"></div> 
-    <div id="surveyResult"></div> 
+    <div id="fyGoalElement"></div> 
+    <div id="fyGoalResult"></div> 
             
 {% endblock %}
        
