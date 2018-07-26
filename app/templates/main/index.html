@@ -1,0 +1,78 @@
+
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+<head>
+</head>
+{% block app_content %}
+<link rel= "stylesheet" href="{{url_for('static', filename='stylesheets/index.css') }}">
+<body>
+<div class="container" display="flex" flex-wrap="nowrap" justify-content="space-between">
+        <div class="row">
+            <div class="col-md-6" >
+                <div class="card" style="width: 25rem;">
+                            <div class="card-body" id="index-card01">
+                              <h4 class="card-subtitle mb-2 text-muted">Self</h4>
+                              <h3 class="card-title">Assess</h3>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="card-link">Card link</a>
+                              <a href="#" class="card-link">Another link</a>
+                            </div>
+                          </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card" style="width: 25rem; margin-left: 10px"> 
+                            <div class="card-body" id="index-card02">
+                              <h4 class="card-subtitle mb-2 text-muted">SMART</h4>
+                              <h3 class="card-title">Goals</h3>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="card-link">Card link</a>
+                              <a href="#" class="card-link">Another link</a>
+                            </div>
+                          </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+              <div class="card" style="width: 50rem;">
+                            <div class="card-body" id="index-card03">
+                              <h4 class="card-subtitle mb-2 text-muted">Assignments &</h4>
+                              <h3 class="card-title">Tasks</h3>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="card-link">Card link</a>
+                              <a href="#" class="card-link">Another link</a>
+                            </div>
+                          </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-6">
+                  <div class="card" style="width: 25rem;">
+                                <div class="card-body" id="index-card04">
+                                  <h4 class="card-subtitle mb-2 text-muted">Your</h4>
+                                  <h3 class="card-title">Portfolio</h3>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="card-link">Card link</a>
+                                  <a href="#" class="card-link">Another link</a>
+                                </div>
+                              </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card" style="width: 25rem;">
+                                <div class="card-body" id="index-card05">
+                                  <h4 class="card-subtitle mb-2 text-muted">Reflections &</h4>
+                                  <h3 class="card-title">Stories</h3>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#" class="card-link">Card link</a>
+                                  <a href="#" class="card-link">Another link</a>
+                                </div>
+                              </div>
+                </div>
+            </div>
+    </body>
+
+      <footer>FOOTER</footer>
+        
+{% endblock %}
+
+
+
