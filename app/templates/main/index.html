@@ -8,69 +8,56 @@
 <body>
 <div class="container" display="flex" flex-wrap="nowrap" justify-content="space-between">
         <div class="row">
-            <div class="col-md-6" >
-                <div class="card" style="width: 25rem;">
-                            <div class="card-body" id="index-card01">
-                              <h4 class="card-subtitle mb-2 text-muted">Self</h4>
-                              <h3 class="card-title">Assess</h3>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
+          <div class="col-md-6">
+            <div class="card"> 
+              <div class="card-body" id="index-card01" onclick='window.location.href="{{ url_for('api.menu') }}"'>
+              <h3 class="card-title" id="card-title-1">Self Assessments</h3>
+              <p class="card-text">Knowing yourself is the first step on the path to a balanced life.</p>
             </div>
-            <div class="col-md-6">
-              <div class="card" style="width: 25rem; margin-left: 10px"> 
-                            <div class="card-body" id="index-card02">
-                              <h4 class="card-subtitle mb-2 text-muted">SMART</h4>
-                              <h3 class="card-title">Goals</h3>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card"> 
+                  <div class="card-body" id="index-card02" onclick='window.location.href="{{ url_for('api.fygoals', username=current_user.username) }}"'>
+                    <h3 class="card-title" id="card-title-2">SMART Goals</h3>
+                    <p class="card-text">Stepping stones achieve dreams.</p>
+                  </div>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-              <div class="card" style="width: 50rem;">
-                            <div class="card-body" id="index-card03">
-                              <h4 class="card-subtitle mb-2 text-muted">Assignments &</h4>
-                              <h3 class="card-title">Tasks</h3>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
-                            </div>
-                          </div>
+              <div class="card">
+                <div class="card-body" id="index-card03" onclick='window.location.href="{{ url_for('communications.todo', username=current_user.username) }}"'>
+                  <h3 class="card-title" id="card-title-3">Assignments and Tasks</h3>
+                  <p class="card-text">Tools that will help organize your busy life.</p>
+                 </div>
+                </div>
             </div>
         </div>
         <div class="row">
                 <div class="col-md-6">
-                  <div class="card" style="width: 25rem;">
-                                <div class="card-body" id="index-card04">
-                                  <h4 class="card-subtitle mb-2 text-muted">Your</h4>
-                                  <h3 class="card-title">Portfolio</h3>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="card-link">Card link</a>
-                                  <a href="#" class="card-link">Another link</a>
+                  <div class="card">
+                                <div class="card-body" id="index-card04" onclick='window.location.href="{{ url_for('api.menu', username=current_user.username) }}"'>
+                                  <h3 class="card-title" id="card-title-4">Portfolio</h3>
+                                  <p class="card-text">Show them who you really are.</p>
                                 </div>
                               </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="card" style="width: 25rem;">
-                                <div class="card-body" id="index-card05">
-                                  <h4 class="card-subtitle mb-2 text-muted">Reflections &</h4>
-                                  <h3 class="card-title">Stories</h3>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                  <a href="#" class="card-link">Card link</a>
-                                  <a href="#" class="card-link">Another link</a>
+                  <div class="card">
+                                <div class="card-body" id="index-card05" onclick='window.location.href="{{ url_for('communications.reflections', username=current_user.username) }}"'>
+                                  <h3 class="card-title" id="card-title-5">Reflections & Stories</h3>
+                                  <p class="card-text">Own your narrative.</p>
                                 </div>
                               </div>
                 </div>
             </div>
+
+        <footer>Copyright 2018 Skyfarm Education, LLC</footer>
     </body>
 
-      <footer>FOOTER</footer>
+   
         
 {% endblock %}
 

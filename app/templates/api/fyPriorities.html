@@ -32,22 +32,27 @@
     function sendDataToServer(survey) {
         //Add hidden fields to result from survey
         data = survey.data;
-        data.survey_location = $('#survey_location').val();
-        data.survey_date = $('#survey_date').val();
-        data.survey_time = $('#survey_time').val(); 
-        data.volunteer = $('#volunteer').val();
+        
         //Send data to server
-        $.post("{{ url_for('api.fypriorities') }}", data);
+        $.post("{{ url_for('api.add_fypriorities') }}", data);
     }
-        $(document).ready(function() {
+    $(document).ready(function() {
         Survey.Survey.cssType = "bootstrap";
-        var survey = new Survey.Survey(surveyData, "surveyResult");
+        var survey = new Survey.Model(fyPrioritiesJSON);
         //Use onComplete event to save the data           
-        survey.onComplete.add(sendDataToServer);
-    });
+        survey
+            .onComplete
+            .add(function (result) {
+                document
+                .querySelector('#fyPrioritiesResult')
+                .innerHTML = "FY Priorities Result: " + JSON.stringify(result.data);
+        });
 
 
-$("#surveyElement").Survey({model: survey});
+    //Use onComplete to get survey.data to pass it to the server.
+
+
+    $("#fyPrioritiesElement").Survey({model: survey, onValueChanged: surveyValueChanged});
 
 </script>
 
@@ -58,11 +63,10 @@ $("#surveyElement").Survey({model: survey});
 
 {% block app_content %}
     <head>
-        <title>First Year SMART Goals</title>
+        <title>First Year Priorities</title>
     </head>
 
-    <div id="surveyElement"></div> 
-    <div id="surveyResult"></div> 
+    <div id="fyPrioritiesElement"></div> 
+    <div id="fyPrioritiesResult"></div> 
             
 {% endblock %}
-       

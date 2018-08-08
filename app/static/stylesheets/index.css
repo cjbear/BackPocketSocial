@@ -1,36 +1,38 @@
 
-body {
+
+.card-body {
+    height: 300px;
 
 }
 
-.col-md-6 {
-    border: solid;
-    padding: 10px;
+.card-subtitle { 
+    margin-left: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
-.col-md-12 {
-    border: solid;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.card-title {
+    margin-left: 10Px;
+    margin-top: 20px;
+}
+
+.card-text {
+    margin-left: 10px;
 }
 
 #index-card01 {
-    background-image: url("/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/static/img/hp_01_cropped.jpg")
+    background-image: url("/static/img/hp_01.jpg")
 }
 
 #index-card02 {
-    background-image: url("/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/static/img/hp_02_cropped.jpg")
+    background-image: url("/static/img/hp_02_cropped.jpg")
 }
 
 #index-card03 {
-    background-image: url("/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/static/img/hp_03_cropped.jpg")
+    background-image: url("/static/img/hp_03.jpg")
 }
 #index-card04 {
-    background-image: url("/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/static/img/hp_04_cropped.jpg")
+    background-image: url("/static/img/hp_04.jpg")
 }
-#index-card056 {
-    background-image: url("/Users/christopherjohnson/Desktop/GitHub052018/BackPocketSocial/BackPocketSocial/app/static/img/hp_05_cropped.jpg")
+#index-card05 {
+    background-image: url("/static/img/hp_05.jpg")
 }

@@ -18,15 +18,11 @@ window.survey = new Survey.Model(fygoalJSON);
 survey
     .onComplete
     .add(function (result) {
+        var myFyGoals = result;
+        var fyJGoalsData = result.data;
         document
             .querySelector('#fygoalResult')
             .innerHTML = "result: " + JSON.stringify(result.data);
     });
-
-survey.data = {
-    name: 'John Doe',
-    email: 'johndoe@nobody.com',
-    car: ['Ford']
-};
 
 $("#surveyElement").Survey({model: survey, onValueChanged: surveyValueChanged});

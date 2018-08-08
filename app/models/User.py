@@ -129,6 +129,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
     messages_sent = db.relationship('MessageModel',
                                     foreign_keys='MessageModel.sender_id',
                                     backref='author', lazy='dynamic')
+
     messages_received = db.relationship('MessageModel',
                                     foreign_keys='MessageModel.recipient_id',
                                     backref='recipient', lazy='dynamic')

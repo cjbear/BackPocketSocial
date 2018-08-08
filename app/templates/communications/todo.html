@@ -22,7 +22,7 @@
                         <th scope="col">Task</th>
                         <th scope="col">Due Date</th>
                         <th scope="col">Priority</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">Details</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,10 +30,11 @@
                         {% if tasks %}
                         {% for task in tasks %}
                         <tr class="active">
-                                <td> <a href="{{ url_for('communications.menu') }}">{{ task.todo_name }}</span></td>
-                                <td>{{ task.todo_priority }}</td>
-                                <td>{{ task.due_date }}</td>
-                                <button type="submit" class="btn btn-success">Done</button>
+                                <td> {{ task.name }}</span></td>
+                                <td>{{ momentjs(task.due_date).calendar() }}</td>
+                                <td>{{ task.priority }}</td>
+                                <td>{{ task.description }}</td>
+                                <td><button type="submit" class="btn btn-success">Done</button></td>
                         </tr>
 
                         {% endfor %}

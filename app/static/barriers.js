@@ -23,10 +23,4 @@ survey
             .innerHTML = "result: " + JSON.stringify(result.data);
     });
 
-survey.data = {
-    name: 'John Doe',
-    email: 'johndoe@nobody.com',
-    car: ['Ford']
-};
-
 $("#surveyElement").Survey({model: survey, onValueChanged: surveyValueChanged});

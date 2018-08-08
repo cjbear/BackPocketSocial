@@ -1,6 +1,6 @@
 #commuications routes.py: messages, notifications, reflections, todos
 
-from datetime import datetime
+import datetime
 from flask import render_template, flash, redirect, url_for, request, g, \
     jsonify, current_app
 from flask_login import current_user, login_required
@@ -95,11 +95,12 @@ def reflections(username):
 def add_reflection(username):
     form = PostForm()
     if form.validate_on_submit():
-        posts = PostModel(date_time = datetime.date.today(), body=form.post.data, author=current_user)
+        posts = PostModel(timestamp = datetime.date.today(), body=form.post.data, author=current_user)
         db.session.commit()
         flash(_('Your reflection is published.'))
         return redirect(url_for('communications.reflections', username=current_user.username))
     return render_template('communications/add_reflection.html', title='Add reflection.', form=form)
+
 
 @bp.route('/todo/<username>', methods=['GET', 'POST'])
 @login_required
@@ -118,14 +119,12 @@ def todo(username):
                            prev_url=prev_url)
 
 
-    
-
 @bp.route('/add_todo/<username>', methods=['GET', 'POST'])
 @login_required
 def add_todo(username):
     form = TaskForm()
     if form.validate_on_submit():
-        tasks = TaskModel(name=form.name.data, priority=form.priority.data, due_date=form.due_date.data, description=form.description.data, user=current_user)
+        tasks = TaskModel(name=form.name.data, priority=form.priority.data, due_date=form.due_date.data, description=form.description.data, done = form.done.data, user=current_user)
         db.session.commit()
         flash(_('Your task is posted.'))
         return redirect(url_for('communications.todo', username=current_user.username))

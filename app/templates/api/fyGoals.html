@@ -33,7 +33,7 @@
         //Add hidden fields to result from survey
         data = survey.data;
         //Send data to server
-        $.post("{{ url_for('api.fygoal') }}", data);
+        $.post("{{ url_for('api.fygoals') }}", data);
     }
     $(document).ready(function() {
         Survey.Survey.cssType = "bootstrap";

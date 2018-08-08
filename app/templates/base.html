@@ -15,33 +15,19 @@
 {% block navbar %}
     <nav class="navbar navbar-default">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    {% if current_user.is_anonymous %}
+                    <li>BackPocket</li>
+                    {% else %}
                     <li><a href="{{ url_for('main.index', username=current_user.username) }}">{{ _('BackPocket') }}</a></li>
                     <li><a href="{{ url_for('api.menu') }}">{{ _('Assess') }}</a></li>
                     <li><a href="{{ url_for('api.fygoals') }}">{{ _('Goals') }}</a></li>
                     <li><a href="{{ url_for('communications.todo', username=current_user.username) }}">{{ _('Tasks') }}</a></li>
                     <li><a href="{{ url_for('communications.reflections', username=current_user.username) }}">{{ _('Reflections') }}</a></li>
-                    <li><a href="{{ url_for('canvas.showAssignments', username=current_user.username) }}">{{ _('Assignments') }}</a></li>
-                    
+                    <li><a href="{{ url_for('canvas.showAssignments', username=current_user.username) }}">{{ _('Portfolio') }}</a></li>
+                    {% endif %}
                 </ul>
-                {% if g.search_form %}
-                <form class="navbar-form navbar-left" method="get"
-                        action="{{ url_for('main.search') }}">
-                    <div class="form-group">
-                        {{ g.search_form.q(size=20, class='form-control',
-                            placeholder=g.search_form.q.label.text) }}
-                    </div>
-                </form>
-                {% endif %}
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}
                         <li><a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
@@ -64,23 +50,22 @@
             </div>
         </div>
     </nav>
+    <div class="container">
+        {% if g.search_form %}
+        <form class="navbar-form navbar-left" method="get"
+            action="{{ url_for('main.search') }}">
+            <div class="form-group">
+            {{ g.search_form.q(size=20, class='form-control',
+                placeholder=g.search_form.q.label.text) }}
+            </div>
+        </form>
+    </div>
+    {% endif %}
+    
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        {% if current_user.is_authenticated %}
-        {% with tasks = current_user.get_tasks_in_progress() %}
-        {% if tasks %}
-            {% for task in tasks %}
-            <div class="alert alert-success" role="alert">
-                {{ task.description }}
-                <span id="{{ task.id }}-progress">{{ task.get_progress() }}</span>%
-            </div>
-            {% endfor %}
-        {% endif %}
-        {% endwith %}
-        {% endif %}
-    </div>
+
     <div class="container">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -107,7 +92,8 @@
             $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     </script>
 
-   
+    <script src="/static/js/moment-with-locals.js"></script>
+    
     <script>
         function translate(sourceElem, destElem, sourceLang, destLang) {
             $(destElem).html('<img src="{{ url_for('static', filename='loading.gif') }}">');
