@@ -1,6 +1,6 @@
 #commuications routes.py: messages, notifications, reflections, todos
 
-import datetime
+from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request, g, \
     jsonify, current_app
 from flask_login import current_user, login_required

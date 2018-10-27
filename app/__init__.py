@@ -16,6 +16,7 @@ from canvasapi import Canvas
 from redis import Redis
 import rq
 from .momentjs import momentjs
+from werkzeug.utils import secure_filename
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -28,6 +29,8 @@ moment = Moment()
 babel = Babel()
 from app import db
 
+UPLOAD_FOLDER = '/static/img/uploads'
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 def create_app(config_class=Config):
     app = Flask(__name__)
@@ -44,6 +47,7 @@ def create_app(config_class=Config):
     app.redis = Redis.from_url(app.config['REDIS_URL'])
     app.task_queue = rq.Queue('main-tasks', connection=app.redis)
     app.jinja_env.globals['momentjs'] = momentjs
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
     from app.api import bp as api_bp
     app.register_blueprint(api_bp, url_prefix='/api')

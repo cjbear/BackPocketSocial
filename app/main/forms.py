@@ -1,5 +1,6 @@
 from flask import request
 from flask_wtf import FlaskForm
+from flask_wtf.file import FileField, FileRequired, FileAllowed
 from wtforms import Form
 from wtforms.fields import *
 from wtforms_components import StringField, SelectField, DateField
@@ -8,6 +9,9 @@ from flask_babel import _, lazy_gettext as _l
 from app.models import User
 import calendar
 
+from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
+
+photos = UploadSet('photos', IMAGES)
 
 class EditProfileForm(FlaskForm):
     username = StringField(_l('Username'), validators=[DataRequired()])
@@ -19,6 +23,7 @@ class EditProfileForm(FlaskForm):
                              validators=[Length(min=0, max=140)])
     about_me = TextAreaField(_l('About me'),
                              validators=[Length(min=0, max=140)])
+    profile_photo = FileField(validators=[FileAllowed(photos, u'Image only!'), FileRequired(u'File was empty!')])
     submit = SubmitField(_l('Submit'))
 
     def __init__(self, original_username, *args, **kwargs):

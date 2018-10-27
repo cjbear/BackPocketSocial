@@ -36,3 +36,5 @@
 #index-card05 {
     background-image: url("/static/img/hp_05.jpg")
 }
+
+a.menu_links { cursor: pointer; }

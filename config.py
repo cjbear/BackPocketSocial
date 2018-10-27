@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
+from werkzeug.utils import secure_filename
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(basedir, '.env'))
@@ -33,6 +34,9 @@ class Config(object):
     POSTS_PER_PAGE = 25
     TASKS_PER_PAGE = 25
     ASSIGNMENTS_PER_PAGE = 25
+    BARRIERS_PER_PAGE = 25
+
+
 
 
 

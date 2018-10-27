@@ -9,3 +9,5 @@
   width: 100%;
   height: 100%;
 }
+
+a.menu_links { cursor: pointer; }

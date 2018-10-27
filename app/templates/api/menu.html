@@ -14,7 +14,7 @@
                     <img src="/static/img/barriers2.jpg" alt="A rock wall.">
                     <div class="caption">
                       <h3>Identify Your Barriers</h3>
-                      <p><a href="{{ url_for('api.barriers') }}" class="btn btn-primary" role="button">Start</a> <a href="#" class="btn btn-default" role="button">View Results</a></p>
+                      <p><a href="{{ url_for('api.barriers_form') }}" class="btn btn-primary" role="button">Start</a> <a href="{{ url_for('api.get_barriers', username=current_user.username) }}" class="btn btn-default" role="button">View Results</a></p>
                     </div>
                   </div>
                 </div>
@@ -24,7 +24,7 @@
                       <img src="/static/img/priorities_web.jpg" alt="Black and white neon sign that says, 'Do What You Love'">
                       <div class="caption"></div>
                         <h3>Define Your Priorities</h3>
-                        <p><a href="{{ url_for('api.fypriorities') }}" class="btn btn-primary" role="button">Start</a> <a href="{{ url_for('api.fypriorities') }}" class="btn btn-default" role="button">View Results</a></p>
+                        <p><a href="{{ url_for('api.fypriorities_form') }}" class="btn btn-primary" role="button">Start</a> <a href="{{ url_for('api.get_fypriorities', username=current_user.username) }}" class="btn btn-default" role="button">View Results</a></p>
                       </div>
                     </div>
                 
@@ -34,7 +34,7 @@
                     <img src="/static/img/goals_web.jpg" alt="...">
                     <div class="caption">
                       <h3>Set Your Goals</h3>
-                      <p><a href="{{ url_for('api.fygoals') }}"class="btn btn-primary" role="button">Start</a> <a href="#" class="btn btn-default" role="button">View Results</a></p>
+                      <p><a href="{{ url_for('api.fygoals_form') }}"class="btn btn-primary" role="button">Start</a> <a href="{{ url_for('api.get_fygoals', username=current_user.username) }}" class="btn btn-default" role="button">View Results</a></p>
                     </div>
                   </div>
                 </div>

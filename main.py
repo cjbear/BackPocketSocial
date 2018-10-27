@@ -9,4 +9,6 @@ cli.register(app)
 @app.shell_context_processor
 def make_shell_context():
     return {'db': db, 'User': User, 'PostModel': PostModel, 'MessageModel': MessageModel,
-            'NotificationModel': NotificationModel, 'TaskModel': TaskModel, 'FyGoalModel': FyGoalModel, 'AssignmentModel': AssignmentModel}
+            'NotificationModel': NotificationModel, 'TaskModel': TaskModel, 'FyGoalModel': FyGoalModel, 
+            'AssignmentModel': AssignmentModel, 'BarriersModel': BarriersModel, 
+            'FyPrioritiesModel': FyPrioritiesModel}

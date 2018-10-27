@@ -22,7 +22,6 @@
                     {% else %}
                     <li><a href="{{ url_for('main.index', username=current_user.username) }}">{{ _('BackPocket') }}</a></li>
                     <li><a href="{{ url_for('api.menu') }}">{{ _('Assess') }}</a></li>
-                    <li><a href="{{ url_for('api.fygoals') }}">{{ _('Goals') }}</a></li>
                     <li><a href="{{ url_for('communications.todo', username=current_user.username) }}">{{ _('Tasks') }}</a></li>
                     <li><a href="{{ url_for('communications.reflections', username=current_user.username) }}">{{ _('Reflections') }}</a></li>
                     <li><a href="{{ url_for('canvas.showAssignments', username=current_user.username) }}">{{ _('Portfolio') }}</a></li>
@@ -34,7 +33,7 @@
                         <li><a href="{{ url_for('auth.register') }}">{{ _('Sign Up') }}</a></li>
                     {% else %}
                     <li> 
-                        <a href="{{ url_for('communications.messages') }}">{{ _('Messages') }} 
+                        <a href="{{ url_for('communications.messages', username=current_user.username   ) }}">{{ _('Messages') }} 
                         {% set new_messages = current_user.new_messages() %}
                         <span id="message_count" class="badge"
                                     style="visibility: {% if new_messages %}visible

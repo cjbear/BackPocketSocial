@@ -16,18 +16,68 @@ from app.api import bp
 
 from app.models.User import User
 from app.models.FyGoalModel import FyGoalModel
+from app.models.FyPrioritiesModel import FyPrioritiesModel
+from app.models.BarriersModel import BarriersModel
 
 
 @bp.route('/menu', methods=['GET'])
 def menu():
     return render_template('api/menu.html')
 
-@bp.route('/fygoals', methods=['GET'])
-def fygoals():
-    return render_template('api/fyGoals.html')
+#BARRIERS
 
-@bp.route('/fygoal/<username>', methods=['GET', 'POST'])
-def add_fygoal(username):
+@bp.route('/barriers_form', methods=['GET'])
+def barriers_form():
+    return render_template('api/barriers_form.html')
+
+@bp.route('/get_barriers/<username>', methods=['GET', 'POST'])
+def get_barriers(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    barriers = user.barriers.order_by(BarriersModel.timestamp.desc())
+    return render_template('api/get_barriers.html', user=user) 
+
+@bp.route('/add_barriers/<username>',methods=['POST'])
+def add_barriers(username, data):
+    barriers_data = request.get_json()
+    cur = mysql.connection.cursor()
+    if not json_data:
+        return jsonify({'message': 'No input data provided'}), 400
+    try:
+        data = json.loads(barriers_data)
+    except ValidationError as err:
+        return jsonify(err.messages), 422
+
+    for key, value in barriers.items():
+            if not value:
+                return jsonify({'error': 'value for {} is empty'.format(key)})
+            new_barriers = BarriersModel(
+                barrier_name  = ['pages']['elements']['choices']['text'],
+                barrier_value = ['pages']['elements']['choices']['value'],
+                author = current_user
+                )
+            db.session.add(new_barriers)
+            db.session.commit()
+            result = barriers.dump(BarriersModel.query.get(barrier.id))
+            return jsonify({
+                'message': 'Your barriers are saved.',
+                'new_barriers': result,
+        })
+            return redirect(url_for('api.add_barriers/<username>', username=current_user.username))
+
+#FIRST YEAR GOALS
+
+@bp.route('/fygoals_form', methods=['GET'])
+def fygoals_form():
+    return render_template('api/fyGoals_form.html')
+
+@bp.route('/get_fygoals/<username>', methods=['GET', 'POST'])
+def get_fygoals(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    fygoals = user.fygoals.order_by(BarriersModel.timestamp.desc())
+    return render_template('api/get_fygoals.html')
+
+@bp.route('/add_fygoal/', methods=['GET', 'POST'])
+def add_fygoal(data):
     json_data = request.get_json()
     if not json_data:
         return jsonify({'message': 'No input data provided'}), 400
@@ -39,7 +89,7 @@ def add_fygoal(username):
     for key, value in fyGoalData.items():
             if not value:
                 return jsonify({'error': 'value for {} is empty'.format(key)})
-            new_fygoal = FyGoals(
+            new_fygoal = FyGoalModel(
                 FirstDraftGoal  = ['pages']['name']['page1']['elements']['name']['FirstDraftGoal'],
                 startDate       = ['pages']['name']['page1']['elements']['name']['startDate'],
                 endDate         = ['pages']['name']['page1']['elements']['name']['endDate'],
@@ -61,20 +111,19 @@ def add_fygoal(username):
 
     return render_template('api/fyGoalResult.html')
 
+#FIRST YEAR PRIORITIES
 
-@bp.route('/barriers', methods=['GET'])
-def barriers():
-    return render_template('api/barriers.html')
+@bp.route('/fypriorities_form', methods=['GET'])
+def fypriorities_form():
+    return render_template('api/fyPriorities_form.html')
 
-@bp.route('/fypriorities', methods=['GET'])
-def fypriorities():
-    return render_template('api/fyPriorities.html')
+@bp.route('/get_fypriorities/<username>', methods=['GET', 'POST'])
+def get_fypriorities(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    fypriorities = current_user.fypriorities.all()
+    return render_template('api/get_fypriorities.html')
 
-@bp.route('/completefypriorities', methods=['GET', 'POST'])
-def completefypriorities():
-    return render_template('api/completefypriorities.html')
-
-@bp.route('/add_fypriorities', methods=['GET', 'POST'])
+@bp.route('/add_fypriorities/', methods=['GET', 'POST'])
 def add_fypriorities(data):
     if request.method == 'POST':
         req_data = request.get_json()
@@ -83,29 +132,26 @@ def add_fypriorities(data):
             if not value:
                 return jsonify({'error': 'value for {} is empty'.format(key)})
         new_fyPriorities = FyPrioritiesModel(
-            Major               = ['pages']['name']['page1']['elements']['name']['Declare my major by the end of this academic year.']['choices']['value']['value']['value'],
-            GradRequirements    = ['pages']['name']['page1']['elements']['name']['Identify the graduation requirements for the major program that I am considering.']['choices']['value']['value']['value'],
-            Gpa                 = ['pages']['name']['page1']['elements']['name']['Achieve or maintain my grade point average.']['choices']['value']['value']['value'],
-            AcademicSupport     = ['pages']['name']['page1']['elements']['name']['Increase use of on campus academic support services.']['choices']['value']['value']['value'],
-            CareerOptions       = ['pages']['name']['page1']['elements']['name']['Research and identify potential career options.']['choices']['value']['value']['value'],
-            SportActivity       = ['pages']['name']['page1']['elements']['name']['Try a new sport or activity.']['choices']['value']['value']['value'],
-            Finances            = ['pages']['name']['page1']['elements']['name']['Improve management of my personal finances.']['choices']['value']['value']['value'],
-            FacultyComm         = ['pages']['name']['page1']['elements']['name']['Increase communication with, and seek advice from, faculty and advisors.']['choices']['value']['value']['value'],
-            LivingSituation     = ['pages']['name']['page1']['elements']['name']['Improve my living situation.']['choices']['value']['value']['value'],
-            Friends             = ['pages']['name']['page1']['elements']['name']['Make more friends.']['choices']['value']['value']['value'],
-            SocialClub          = ['pages']['name']['page1']['elements']['name']['Participate in a social club.']['choices']['value']['value']['value'],
-            PhysicalFitness     = ['pages']['name']['page1']['elements']['name']['Improve my physical fitness.']['choices']['value']['value']['value'],
-            Stress              = ['pages']['name']['page1']['elements']['name']['Manage my stress and anxiety.']['choices']['value']['value']['value'],
-            Volunteer           = ['pages']['name']['page1']['elements']['name']['Do volunteer work.']['choices']['value']['value']['value'],
-            StudyAbroad         = ['pages']['name']['page1']['elements']['name']['Find and apply for a study abroad program.']['choices']['value']['value']['value'],
-            
-            AddPriority01       = ['pages']['name']['page2']['elements']['items']['name']['addFyPriority01'],
-            AddPriority02       = ['pages']['name']['page2']['elements']['items']['name']['addFyPriority02'],
-            AddPriority03       = ['pages']['name']['page2']['elements']['items']['name']['addFyPriority02'],
-            FyPriorityReflection= ['pages']['name']['page2']['elements']['items']['name']['fyPrioritiesReflection'],
+            fypriority_name     = ['pages']['name']['page1']['elements']['name']['Declare my major by the end of this academic year.']['choices']['value']['value']['value'],
+            fypriority_value    = ['pages']['name']['page1']['elements']['choices']['value'],
+            addpriority_name    = ['pages']['name']['page2']['elements']['items']['title'],
+            fypriorityreflect   = ['pages']['name']['page2']['elements']['title'],
+            author = current_user
             )
         db.session.add(new_fyPriorities)
         db.session.commit()
 
     return render_template('api/barriersResults.html')
 
+#this route sets-up a smart goal to track.
+@bp.route('/add_trackgoal/', methods=['GET', 'POST'])
+def add_trackgoal(username):
+    form = PostForm()
+    if form.validate_on_submit():
+        trackgoals = TrackGoalModel(timestamp = datetime.date.today(), body=form.post.data, author=current_user)
+        db.session.commit()
+        flash(_('Your are ready to achieve your goal!'))
+        return redirect(url_for('api.trackgoal', username=current_user.username))
+    return render_template('api/add_trackgoal.html', title='Add a goal to track.', form=form)
+
+#another route needed to update goal progress. User enters data that shows that he or she is working towards goal.

@@ -25,6 +25,8 @@ from app.models.FyGoalModel import FyGoalModel
 from app.models.AssignmentModel import AssignmentModel
 from app.models.MessageModel import MessageModel
 from app.models.NotificationModel import NotificationModel
+from app.models.FyPrioritiesModel import FyPrioritiesModel
+from app.models.BarriersModel import BarriersModel
 
 
 class SearchableMixin(object):
@@ -113,6 +115,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
     lastName = db.Column(db.String(64))
     mobileNumber = db.Column(db.String(12))
     about_me = db.Column(db.String(140))
+    profile_photo = db.Column(db.LargeBinary)
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
 
     tasks = db.relationship('TaskModel', backref='user', lazy='dynamic')
@@ -136,6 +139,15 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
     last_message_read_time = db.Column(db.DateTime)
 
     notifications = db.relationship('NotificationModel', backref='user',
+                                    lazy='dynamic')
+
+    fypriorities = db.relationship('FyPrioritiesModel', backref='user',
+                                    lazy='dynamic')
+    
+    fygoals = db.relationship('FyGoalModel', backref='user',
+                                    lazy='dynamic')
+
+    barriers = db.relationship('BarriersModel', backref='user',
                                     lazy='dynamic')
 
     def __repr__(self):
@@ -243,7 +255,7 @@ class UserDetails(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     user_id = db.Column(db.Integer)
     username = db.Column(db.String(100))
-    profile_pic = db.Column(db.String(300))
+    profile_photo = db.Column(db.String(300))
     location = db.Column(db.String(100))
 
     def __init__(self, user_id, username, profile_pic, location):

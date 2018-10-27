@@ -18,13 +18,12 @@ class PostForm(FlaskForm):
 
 class TaskForm(FlaskForm):
     name = TextAreaField(_l(u'Task Name'), validators=[DataRequired()])
-    priority = SelectField(_l('Priority'), choices=[('high', 'high'), ('medium', 'medium'),('low', 'low')], coerce=str, option_widget=None, validators=[DataRequired()])
+    priority = SelectField(_l('Priority'), choices=[('high', 'high'), ('medium', 'medium'), ('low', 'low')], validators=[DataRequired()])
     due_date = DateField(_l('Due Date', format='%Y-%m-%d'))
     description = TextAreaField(_l('Description'))
     done = SelectField(u'Complete?', choices=[('no', 'No'), ('yes', 'Yes'),])
     submit = SubmitField(_l('Submit'))
 
 class MessageForm(FlaskForm):
-    message = TextAreaField(_l('Message'), validators=[
-        DataRequired(), Length(min=1, max=140)])
+    message = TextAreaField(_l('Message'), validators=[DataRequired(), Length(min=1, max=140)])
     submit = SubmitField(_l('Submit'))

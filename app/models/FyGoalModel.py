@@ -29,6 +29,7 @@ from app.models import User
 class FyGoalModel(db.Model):
     id =db.Column(db.String(36), primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)  
     FirstDraftGoal = db.Column(db.String(1000))
     startDate = db.Column(db.DateTime())
     endDate = db.Column(db.DateTime())
@@ -87,3 +88,14 @@ class FyGoalModel(db.Model):
         return unicode(self.id)
 
         from app.search import add_to_index, remove_from_index, query_index
+
+class TrackGoalModel(db.Model):
+    id = db.Column(db.String(36), primary_key=True)
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)  
+    name = db.Column(db.String(100))
+    smart_description = db.Column(db.String(1000))
+    due_date = db.Column(db.DateTime())
+    dimension = db.Column(db.String(100))
+    unit_number = db.Column(db.String(10))
+    unit_type = db.Column(db.String(10))
+    done = db.Column(db.String(10))

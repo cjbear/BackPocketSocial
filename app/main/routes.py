@@ -1,10 +1,12 @@
 from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request, g, \
-    jsonify, current_app
+    jsonify, current_app, send_from_directory
+from werkzeug.utils import secure_filename
 from flask_login import current_user, login_required
 from flask_security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin, login_required
 from flask_sqlalchemy import SQLAlchemy
 from flask_babel import _, get_locale
+from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
 #from guess_language import guess_language
 from app import db
 from app.main.forms import EditProfileForm, SearchForm
@@ -52,6 +54,7 @@ def edit_profile():
         current_user.lastName = form.lastName.data
         current_user.mobileNumber = form.mobileNumber.data
         current_user.about_me = form.about_me.data
+        current_user.profile_pic = form.profile_pic.data
         db.session.commit()
         flash(_('Your changes have been saved.'))
         return redirect(url_for('main.edit_profile'))
@@ -61,8 +64,34 @@ def edit_profile():
         form.lastName.data = current_user.lastName
         form.mobileNumber = current_user.mobileNumber
         form.about_me.data = current_user.about_me
+        current_user.profile_photo = form.profile_photo.data
+
     return render_template('user_profile/edit_profile.html', title=_('Edit Profile'),
                            form=form)
+
+photos = UploadSet('photos', IMAGES)
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+@bp.route('/upload', methods=['GET', 'POST'])
+def upload():
+    if request.method == 'POST' and 'photo' in request.files:
+        filename = photos.save(request.files['photo'])
+        rec = Photo(filename=filename, user=g.user.id)
+        rec.store()
+        flash("Photo saved.")
+        return redirect(url_for('show', id=rec.id))
+    return render_template('user_profile/upload.html')
+
+@bp.route('/photo/<id>')
+def show(id):
+    photo = Photo.load(id)
+    if photo is None:
+        abort(404)
+    url = photos.url(photo.filename)
+    return render_template('show.html', url=url, photo=photo)
 
 @bp.route('/follow/<username>')
 @login_required
@@ -117,7 +146,34 @@ def search():
     return render_template('search.html', title=_('Search'), posts=posts,
                            next_url=next_url, prev_url=prev_url)
 
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+@bp.route('/upload_file', methods=['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        # if user does not select file, browser also
+        # submit an empty part without filename
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            return redirect(url_for('uploaded_file',
+                                    filename=filename))
+    return render_template('upload.html') 
+
+@bp.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'],
+                               filename)
     
 
 
