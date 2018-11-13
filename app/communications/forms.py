@@ -11,11 +11,12 @@ from flask_babel import _, lazy_gettext as _l
 from app.models import User
 import calendar
 
-
+#This form is for entering new reflections ("posts").
 class PostForm(FlaskForm):
     post = TextAreaField(_l('Write a reflection.'), validators=[DataRequired()])
     submit = SubmitField(_l('Submit'))
 
+#This form enables users to manually create tasks for the todo list.
 class TaskForm(FlaskForm):
     name = TextAreaField(_l(u'Task Name'), validators=[DataRequired()])
     priority = SelectField(_l('Priority'), choices=[('high', 'high'), ('medium', 'medium'), ('low', 'low')], validators=[DataRequired()])
@@ -24,6 +25,7 @@ class TaskForm(FlaskForm):
     done = SelectField(u'Complete?', choices=[('no', 'No'), ('yes', 'Yes'),])
     submit = SubmitField(_l('Submit'))
 
+#This form is to create a message. 
 class MessageForm(FlaskForm):
     message = TextAreaField(_l('Message'), validators=[DataRequired(), Length(min=1, max=140)])
     submit = SubmitField(_l('Submit'))

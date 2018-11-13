@@ -1,3 +1,10 @@
+#main\forms.py
+#These forms are for updating the user's profile. 
+#There is also a class for a search form.
+
+#The edit profile form needs to include a profile image that can be uploaded by the user.
+#The user profile page needs to be redesigned. See user_profile/edit_profile.html.
+
 from flask import request
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileRequired, FileAllowed
@@ -9,7 +16,7 @@ from flask_babel import _, lazy_gettext as _l
 from app.models import User
 import calendar
 
-from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
+from flask_uploads import UploadSet, configure_uploads, IMAGES
 
 photos = UploadSet('photos', IMAGES)
 

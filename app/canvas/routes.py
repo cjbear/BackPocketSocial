@@ -1,3 +1,18 @@
+#canvas\routes.py
+
+'''
+These routes are designed to use the Canvas LMS API to retrieve user's assignments
+from their Canvas courses. 
+
+Here is the Canvas LMS API documentation: https://canvas.instructure.com/doc/api/index.html.
+
+CanvasAPI is an open source Pyton library could be 
+used to more easily write these routes: https://github.com/ucfopen/canvasapi
+
+Example code using CanvasAPI can be found here: 
+https://canvasapi.readthedocs.io/en/latest/examples.html#boilerplate
+
+'''
 
 from canvasapi import Canvas
 from flask import Flask
@@ -17,27 +32,24 @@ from app.canvas import bp
 from app.models.User import User
 from app.models.AssignmentModel import AssignmentModel
 
+#
 course_id = 12345
 API_URL = 'https://canvas.instructure.com/api/v1/'
 API_KEY = '7~pMe69XczZkRi2anWMxItDgHpAeC0HnHvb0lZlAghSoxu5gS1GdmEjsn98c8Waf7C'
+canvas = Canvas(API_URL, API_KEY)
 
-@bp.route('/getAssignments/', methods=['GET', 'POST'])
-def getAssignments():
-    url = 'https://canvas.instructure.com/api/v1/courses/1234368/assignments.json?'
-    CANVAS_API_KEY = '7~pMe69XczZkRi2anWMxItDgHpAeC0HnHvb0lZlAghSoxu5gS1GdmEjsn98c8Waf7C'
-    headers = {'Authorization': 'Bearer ' + CANVAS_API_KEY}
-    params = {
-        }
-    response = requests.get(url, headers = headers, params=params)
-    assignments = response.json()
+@bp.route('/getAssignments/<username>', methods=['GET', 'POST'])
+@login_required
+def get_assignments(username):
+    assignments = course.get_assignments()
     for assignment in assignments:
-        assignment = AssignmentModel(description=assignment.description, due_at = assignment.due_at, unlock_at = assignment.unlock_at,
-            lock_at = assignment.lock_at, author=current_user) 
-        db.session.commit()
+        print(assignment)   
+        db.session.commit(assignment)
         flash(_('Your assignments are saved.'))
     return render_template('canvas/getAssignments.html')
 
 @bp.route('/showAssignments/<username>', methods=['GET', 'POST'])
+@login_required
 def showAssignments(username):
     user = User.query.filter_by(username=username).first_or_404()
     page = request.args.get('page', 1, type=int)

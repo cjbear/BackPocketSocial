@@ -10,6 +10,7 @@ from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
+from flask_uploads import UploadSet, IMAGES, configure_uploads
 from elasticsearch import Elasticsearch
 from config import Config
 from canvasapi import Canvas
@@ -47,7 +48,10 @@ def create_app(config_class=Config):
     app.redis = Redis.from_url(app.config['REDIS_URL'])
     app.task_queue = rq.Queue('main-tasks', connection=app.redis)
     app.jinja_env.globals['momentjs'] = momentjs
+    images = UploadSet('images', IMAGES)
     app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+    '''app.configure_uploads(app, (photos, images))'''
+    
 
     from app.api import bp as api_bp
     app.register_blueprint(api_bp, url_prefix='/api')

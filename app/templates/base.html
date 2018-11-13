@@ -24,7 +24,7 @@
                     <li><a href="{{ url_for('api.menu') }}">{{ _('Assess') }}</a></li>
                     <li><a href="{{ url_for('communications.todo', username=current_user.username) }}">{{ _('Tasks') }}</a></li>
                     <li><a href="{{ url_for('communications.reflections', username=current_user.username) }}">{{ _('Reflections') }}</a></li>
-                    <li><a href="{{ url_for('canvas.showAssignments', username=current_user.username) }}">{{ _('Portfolio') }}</a></li>
+                    <li><a href="{{ url_for('canvas.get_assignments', username=current_user.username) }}">{{ _('Portfolio') }}</a></li>
                     {% endif %}
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

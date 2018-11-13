@@ -6,7 +6,7 @@ from flask_login import current_user, login_required
 from flask_security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin, login_required
 from flask_sqlalchemy import SQLAlchemy
 from flask_babel import _, get_locale
-from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
+from flask_uploads import UploadSet, configure_uploads, IMAGES
 #from guess_language import guess_language
 from app import db
 from app.main.forms import EditProfileForm, SearchForm
@@ -54,7 +54,6 @@ def edit_profile():
         current_user.lastName = form.lastName.data
         current_user.mobileNumber = form.mobileNumber.data
         current_user.about_me = form.about_me.data
-        current_user.profile_pic = form.profile_pic.data
         db.session.commit()
         flash(_('Your changes have been saved.'))
         return redirect(url_for('main.edit_profile'))

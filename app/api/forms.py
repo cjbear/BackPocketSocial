@@ -1,3 +1,8 @@
+#api\forms.py
+#This code is underconstruction; it is not yet used in the working program. I am figureing out a program that would help students
+#create measurable goals using metrics that could be tracked. The trick is to anticipate
+#the various units of measurement. 
+
 from flask import request
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileRequired, FileAllowed

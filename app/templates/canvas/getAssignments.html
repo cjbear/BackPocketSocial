@@ -9,7 +9,7 @@
     <div>{{assignment["unlock_at"]}}</div>
     <div>{{assignment["lock_at"]}}</div>
   {% endfor %}
-  <button id="getAssignBtn">Get Your Assignments</button>
+  <button id="getAssignBtn" href="{{ url_for('user.getAssignments', username=current_user.username) }}">Get Your Assignments</button>
   {% endblock %}
 </body>
 </html>

@@ -115,7 +115,6 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
     lastName = db.Column(db.String(64))
     mobileNumber = db.Column(db.String(12))
     about_me = db.Column(db.String(140))
-    profile_photo = db.Column(db.LargeBinary)
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
 
     tasks = db.relationship('TaskModel', backref='user', lazy='dynamic')

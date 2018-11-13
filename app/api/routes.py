@@ -1,4 +1,10 @@
-#surveys routes.py
+#api\routes.py
+
+'''
+These routes are for the student questionnaires. These need to be RESTFUL CRUD routes to support json questionnaires created using
+the https://surveyjs.io/Overview/Library/. See the javascript files in the static folder.
+
+'''
 
 import json
 from datetime import datetime
@@ -19,23 +25,27 @@ from app.models.FyGoalModel import FyGoalModel
 from app.models.FyPrioritiesModel import FyPrioritiesModel
 from app.models.BarriersModel import BarriersModel
 
-
+#This route displays the student self-assessments.
 @bp.route('/menu', methods=['GET'])
 def menu():
     return render_template('api/menu.html')
 
-#BARRIERS
+#BARRIERS SURVEY
+#These CRUD routes are for the barriers questionnair.
 
+#Displays a new barrier form.
 @bp.route('/barriers_form', methods=['GET'])
 def barriers_form():
     return render_template('api/barriers_form.html')
 
+#Retrieves a user's barriers from the database.
 @bp.route('/get_barriers/<username>', methods=['GET', 'POST'])
 def get_barriers(username):
     user = User.query.filter_by(username=username).first_or_404()
     barriers = user.barriers.order_by(BarriersModel.timestamp.desc())
     return render_template('api/get_barriers.html', user=user) 
 
+#adds user's new barriers to the database when user clicks submit button.
 @bp.route('/add_barriers/<username>',methods=['POST'])
 def add_barriers(username, data):
     barriers_data = request.get_json()
@@ -64,18 +74,35 @@ def add_barriers(username, data):
         })
             return redirect(url_for('api.add_barriers/<username>', username=current_user.username))
 
-#FIRST YEAR GOALS
+#Still to be written: Update user's existing barriers. This would add, replace, or delete individual barriers from user's existing set
 
+'''
+@bp.route('/update_barriers/<username>',methods=['POST'])
+'''
+
+#Delete's all user's existing barriers.
+
+'''
+@bp.route('/delete_barriers/<username>',methods=['POST'])
+'''
+
+
+#FIRST YEAR GOALS survey routes
+#These CRUD routes are for the first year goal(s) questionnair.
+
+#Displays a new first year goal form.
 @bp.route('/fygoals_form', methods=['GET'])
 def fygoals_form():
     return render_template('api/fyGoals_form.html')
 
+#retrieves user's first year goal(s) to the database when user clicks submit button.
 @bp.route('/get_fygoals/<username>', methods=['GET', 'POST'])
 def get_fygoals(username):
     user = User.query.filter_by(username=username).first_or_404()
     fygoals = user.fygoals.order_by(BarriersModel.timestamp.desc())
     return render_template('api/get_fygoals.html')
 
+#adds user's first year goal to the database when user clicks submit button.
 @bp.route('/add_fygoal/', methods=['GET', 'POST'])
 def add_fygoal(data):
     json_data = request.get_json()
@@ -111,18 +138,36 @@ def add_fygoal(data):
 
     return render_template('api/fyGoalResult.html')
 
+#Still to be written: Update user's existing first year goals. 
+#This would edit user's existing first year goal.
+
+'''
+@bp.route('/update_fygoal/<username>',methods=['POST'])
+'''
+
+#Deletes user's first year goal.
+
+'''
+@bp.route('/delete_fygoal/<username>',methods=['POST'])
+'''
+
 #FIRST YEAR PRIORITIES
 
+#Displays a new first year priorities form.
 @bp.route('/fypriorities_form', methods=['GET'])
 def fypriorities_form():
     return render_template('api/fyPriorities_form.html')
 
+
+#Retrieves user's first year priorities from the database.
 @bp.route('/get_fypriorities/<username>', methods=['GET', 'POST'])
 def get_fypriorities(username):
     user = User.query.filter_by(username=username).first_or_404()
     fypriorities = current_user.fypriorities.all()
     return render_template('api/get_fypriorities.html')
 
+
+#Adds new first year priorities to the database.
 @bp.route('/add_fypriorities/', methods=['GET', 'POST'])
 def add_fypriorities(data):
     if request.method == 'POST':
@@ -143,6 +188,19 @@ def add_fypriorities(data):
 
     return render_template('api/barriersResults.html')
 
+#Still to be written: Update user's existing first year priorities. 
+#This would edit user's existing first year priorities.
+
+'''
+@bp.route('/update_fypriorities/<username>',methods=['POST'])
+'''
+
+#Deletes all user's first year priorities.
+
+'''
+@bp.route('/delete_fypriorities/<username>',methods=['POST'])
+'''
+
 #this route sets-up a smart goal to track.
 @bp.route('/add_trackgoal/', methods=['GET', 'POST'])
 def add_trackgoal(username):
@@ -153,5 +211,7 @@ def add_trackgoal(username):
         flash(_('Your are ready to achieve your goal!'))
         return redirect(url_for('api.trackgoal', username=current_user.username))
     return render_template('api/add_trackgoal.html', title='Add a goal to track.', form=form)
+
+
 
 #another route needed to update goal progress. User enters data that shows that he or she is working towards goal.

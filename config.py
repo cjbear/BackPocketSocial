@@ -4,6 +4,7 @@ from sqlalchemy import create_engine
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from werkzeug.utils import secure_filename
+from flask_uploads import UploadSet, IMAGES, configure_uploads
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(basedir, '.env'))
@@ -35,6 +36,17 @@ class Config(object):
     TASKS_PER_PAGE = 25
     ASSIGNMENTS_PER_PAGE = 25
     BARRIERS_PER_PAGE = 25
+ 
+ # Configure the image uploading via Flask-Uploads
+ # Uploads
+    UPLOADS_DEFAULT_DEST = basedir + 'static/img/uploads'
+    UPLOADS_DEFAULT_URL = 'http://localhost:3306/static/img/uploads'
+ 
+    UPLOADED_IMAGES_DEST = basedir + 'static/img/uploads'
+    UPLOADED_IMAGES_URL = 'http://localhost:3306/static/img/uploads'
+    UPLOADED_PHOTOS_DEST = 'static/img/uploads'
+    
+
 
 
 
