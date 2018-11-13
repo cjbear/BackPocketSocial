@@ -29,36 +29,38 @@
     
     <script> 
 
-    function sendDataToServer(fyGoal) {
+    function sendDataToServer(survey) {
         //Add hidden fields to result from survey
         data = survey.data;
+        
         //Send data to server
-        $.post("{{ url_for('api.fygoals') }}", data);
+        $.post("{{ url_for('api.add_fypriorities') }}", data);
     }
     $(document).ready(function() {
         Survey.Survey.cssType = "bootstrap";
-        var fyGoal = new Survey.Survey(data, "fyGoalResult");
+        var survey = new Survey.Model(fyPrioritiesJSON);
         //Use onComplete event to save the data           
+
         survey.onComplete.add(sendDataToServer);
-    });
+
+    //Use onComplete to get survey.data to pass it to the server.
 
 
-$("#fyGoalElement").Survey({model: survey});
+    $("#fyPrioritiesElement").Survey({model: survey, onValueChanged: surveyValueChanged});
 
 </script>
 
-<script src="{{ url_for('static', filename='fygoals.js') }}"></script>
+<script src="{{ url_for('static', filename='fyPriorities.js') }}"></script>
 
 {{super()}}
 {% endblock %}
 
 {% block app_content %}
     <head>
-        <title>First Year SMART Goals</title>
+        <title>First Year Priorities</title>
     </head>
 
-    <div id="fyGoalElement"></div> 
-    <div id="fyGoalResult"></div> 
+    <div id="fyPrioritiesElement"></div> 
+    <div id="fyPrioritiesResult"></div> 
             
 {% endblock %}
-       

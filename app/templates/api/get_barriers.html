@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+<html lang="en">
+<header>
+    <link rel="stylesheet" href="{{ url_for( 'static', 'stylesheets/todo.css' ) }}">
+</header>
+  
+    <body>
+     
+        {% block app_content %}
+        <head>
+            <h1>{{ _('%(username)s', username=current_user.username) }}</h1>
+            <h3>You said that these are the barriers that may come between you and your success this academic year.</h3>
+        </head>
+
+        <div class="container">
+            <table class="table table-sm">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Your Potential Barriers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {% if barriers %}
+                        {% for barrier in barriers %}
+                        <tr class="active">
+                                <td> {{ barrier.barrier_name }}</span></td>
+                        </tr>
+
+                        {% endfor %}
+                        {% endif %}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+         <a href="{{ url_for('api.barriers_form', username=current_user.username) }}" type="button" class="btn btn-success">Update your barriers.</a>
+            
+        </div>
+        {% endblock %}
+    </body>
+
+</html>

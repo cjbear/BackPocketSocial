@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+<!doctype html>
+
+{% block app_content %}
+
+    <title>Profile Photo Upload</title>
+    <h1>Upload a photo of yourself.</h1>
+    <form method=post enctype=multipart/form-data action="{{ url_for('upload') }}"></form>>
+      <input type=file name=photo>
+      <input type=submit value=Upload>
+    </form>
+
+{% endblock %}

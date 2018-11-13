@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block html_attribs %} lang="en"{% endblock %}
 
+
     <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css"> -->
 
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
@@ -22,46 +23,39 @@
     <title>Example of setting and getting results into/from the survey, jQuery Survey Library Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://unpkg.com/jquery"></script>
-    <script src="https://surveyjs.azureedge.net/1.0.29/survey.jquery.min.js"></script>
     <script src="https://surveyjs.azureedge.net/1.0.29/survey.jquery.js"></script>
     <link href="https://surveyjs.azureedge.net/1.0.29/survey.css" type="text/css" rel="stylesheet"/>
 
-
+    
     <script> 
 
     function sendDataToServer(survey) {
         //Add hidden fields to result from survey
         data = survey.data;
-        data.survey_location = $('#survey_location').val();
-        data.survey_date = $('#survey_date').val();
-        data.survey_time = $('#survey_time').val(); 
-        data.volunteer = $('#volunteer').val();
         //Send data to server
-        $.post("{{ url_for('api.barriersCompleted') }}", data);
+        $.post("{{ url_for('api.add_fygoal') }}", data);
     }
     $(document).ready(function() {
         Survey.Survey.cssType = "bootstrap";
-        var survey = new Survey.Survey(surveyData, "surveyResult");
+        var survey = new Survey.Model(fygoalJSON);
         //Use onComplete event to save the data           
         survey.onComplete.add(sendDataToServer);
-    });
 
-
-$("#surveyElement").Survey({model: survey});
+    $("#fyGoalElement").Survey({model: survey, onValueChanged: surveyValueChanged});
 
 </script>
 
-<script src="{{ url_for('static', filename='barriers.js') }}"></script>
+<script src="{{ url_for('static', filename='fygoals.js') }}"></script>
 
 {{super()}}
 {% endblock %}
 
 {% block app_content %}
     <head>
-        <title>What are your barriers?</title>
+        <title>First Year SMART Goals</title>
     </head>
 
-    <div id="surveyElement"></div> 
-    <div id="surveyResult"></div> 
+    <div id="fyGoalElement"></div> 
+    <div id="fyGoalResult"></div> 
             
 {% endblock %}
