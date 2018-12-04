@@ -23,7 +23,7 @@ The major problem that BackPocket solves is that faculty advisors and students a
 <h2>Student's Portfolio: Advisor's View</h2>
 <p>The advisor would navigate to this view by clicking on the student's name from the List of Student Advisees. (Alternatively, they could use a search function to find the student's name and then click\tap to open the student's portfolio.</p>
 <i>Permissions \ Security Note: It may be necessary, in the prototype, to demonstrate that some or all of the student's assessment work is kept private so as to encourage them to be as honest as possible. For example, the Well-being Assessment results and related reflections should probably be kept private. (Eventually, the student could choose to share their information with specific people or make some of their information generally pubic. For example, post share their reflections like blog posts.)</i>
-<h2>Advisors Reflections</p>
+<h2>Advisors Reflections</h2>
 Similar to student reflections, which would be a place where advisors can write and save their notes about each student advisee. For the initial prototype, thise could be a simple text box, but later BackPocket should give advisors the ability to create video or audio reflections.</p>
 
 
