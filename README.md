@@ -9,5 +9,12 @@
      These self-assessments will be designed to help a student set long- and short-term goals, and create action plans to achieve those goals. The assessments are questionnaires that, in some cases, will give students immediate feedack. For the prototype, the questionnaires would be limited to:</p>
      <li>Multidimensional Well-being Assessemnt</li>
      <li>Barriers Assessment</li>
-       <li>SMART Goals Creation "Wizard"</li>
+     <li>Priorities Assessment</li>
+     <li>SMART Goals Creation "Wizard"</li>
+<h2>Reflections (Student Journal)</h2>
+<p>This is a feature that would enable students to relfect on their "BackPocket experience." They should be able to create a reflection anywhere in the system, but especially during or after completion of an assessment or some other meaningful activity. For the prototype, this feature would accept simple text input, but later is should be expanded so that students can create audio or video reflections." 
+ <h2> Student Portfolio</h2>
+ <p>The student portfolio is the place where students can view their assessment results and reflections. </p>
+
+
      
