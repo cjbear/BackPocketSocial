@@ -1,7 +1,7 @@
 # BackPocketSocial
 <p>This is a program that I am writing using Python \ Flask, jQuery, JavaScript, HTML5, and CSS with a MySQL database.</p>
 <p>It is a student retention and success app that will enable college advisors and students to communicate more effectively throughout the academic year.</p>
-<h1>First Version Prorotype Features</h1>
+<h1>Student Features</h1>
 <p>These are the elements needed for initial the prototype for testing by faculty advisors and students. There would need to be two user-types or personas with corresponding permissions and screen views: students and facutly advisors. </p>
  <h2>Student's To Do List</h2>
    <p>The homescreen would be a dynamic list of assigned activities that the student would neeed to complete before meeting with his or her advistor. The list would included the name or title of the activity and a due date\time.</p>
