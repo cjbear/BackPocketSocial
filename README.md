@@ -11,7 +11,8 @@
      <li>Barriers Assessment</li>
      <li>Priorities Assessment</li>
      <li>SMART Goals Creation "Wizard"</li>
-<h2>Reflections (Student Journal)</h2>
+<p>I used SurveyJS's survey builder (https://surveyjs.io) to create the assessments.  The assessments are built with jQuery, JavaScript, and JSON (see static\js). The html templates that display the assessments are located in templates\api. Here is a link for more info: https://surveyjs.io/Documentation/Library/?id=Add-Survey-into-your-Web-Page. 
+<h2>Reflections (Student Journal) </h2>
 <p>This is a feature that would enable students to relfect on their "BackPocket experience." They should be able to create a reflection anywhere in the system, but especially during or after completion of an assessment or some other meaningful activity. For the prototype, this feature would accept simple text input, but later is should be expanded so that students can create audio or video reflections." 
  <h2> Student Portfolio</h2>
  <p>The student portfolio is the place where students can view their assessment results and reflections. </p>
@@ -19,9 +20,11 @@
 The major problem that BackPocket solves is that faculty advisors and students are limited time to meet and get to know each other before the beginning of the academic term. How can a advisor advise a student that she or he has just met and knows very little about the student's goals or ambitions. And in many cases, haven't done the work to figure out how their goals and ambitions align with the courses that they should take. </p>
 <h2>List of Student Advisees</h2>
 <p>This would be the advisor's equivalent to the student's To Do List. Instead of activities, it would list student names and dates \ times when the advisor should follow-up with the student. The advisor would be able to scroll through the names and click \ tap on a name to see the student's portfolio, especially the students current goals, action plans, progress, and relevant reflections.</p>
-<h3>Student's Portfolio: Advisor's View</h3>
+<h2>Student's Portfolio: Advisor's View</h2>
 <p>The advisor would navigate to this view by clicking on the student's name from the List of Student Advisees. (Alternatively, they could use a search function to find the student's name and then click\tap to open the student's portfolio.</p>
-<i>Permissions Note: It may be necessary, in the prototype, to demonstrate that some or all of the student's assessment work is kept private so as to encourage them to be as honest as possible. For example, the Well-being Assessment results and related reflections should probably be kept private. (Eventually, the student could choose to share their information with specific people or make some of their information generally pubic. For example, post share their reflections like blog posts.)</i>
+<i>Permissions \ Security Note: It may be necessary, in the prototype, to demonstrate that some or all of the student's assessment work is kept private so as to encourage them to be as honest as possible. For example, the Well-being Assessment results and related reflections should probably be kept private. (Eventually, the student could choose to share their information with specific people or make some of their information generally pubic. For example, post share their reflections like blog posts.)</i>
+<h2>Advisors Reflections</p>
+Similar to student reflections, which would be a place where advisors can write and save their notes about each student advisee. For the initial prototype, thise could be a simple text box, but later BackPocket should give advisors the ability to create video or audio reflections.</p>
 
 
 
