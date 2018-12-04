@@ -17,7 +17,12 @@
  <p>The student portfolio is the place where students can view their assessment results and reflections. </p>
 <h1>Faculty Advisor Features</h1>
 The major problem that BackPocket solves is that faculty advisors and students are limited time to meet and get to know each other before the beginning of the academic term. How can a advisor advise a student that she or he has just met and knows very little about the student's goals or ambitions. And in many cases, haven't done the work to figure out how their goals and ambitions align with the courses that they should take. </p>
-<p>The BackPocket prototype should give the advisor the ability to review the student's up-to-date BackPocket assessments and reflections so that they can be better prepared to advise the student during their meeting(s). 
+<h2>List of Student Advisees</h2>
+<p>This would be the advisor's equivalent to the student's To Do List. Instead of activities, it would list student names and dates \ times when the advisor should follow-up with the student. The advisor would be able to scroll through the names and click \ tap on a name to see the student's portfolio, especially the students current goals, action plans, progress, and relevant reflections.</p>
+<h3>Student's Portfolio: Advisor's View</h3>
+<p>The advisor would navigate to this view by clicking on the student's name from the List of Student Advisees. (Alternatively, they could use a search function to find the student's name and then click\tap to open the student's portfolio.</p>
+<i>Permissions Note: It may be necessary, in the prototype, to demonstrate that some or all of the student's assessment work is kept private so as to encourage them to be as honest as possible. For example, the Well-being Assessment results and related reflections should probably be kept private. (Eventually, the student could choose to share their information with specific people or make some of their information generally pubic. For example, post share their reflections like blog posts.)</i>
+
 
 
      
