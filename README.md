@@ -15,6 +15,9 @@
 <p>This is a feature that would enable students to relfect on their "BackPocket experience." They should be able to create a reflection anywhere in the system, but especially during or after completion of an assessment or some other meaningful activity. For the prototype, this feature would accept simple text input, but later is should be expanded so that students can create audio or video reflections." 
  <h2> Student Portfolio</h2>
  <p>The student portfolio is the place where students can view their assessment results and reflections. </p>
+<h1>Faculty Advisor Features</h1>
+The major problem that BackPocket solves is that faculty advisors and students are limited time to meet and get to know each other before the beginning of the academic term. How can a advisor advise a student that she or he has just met and knows very little about the student's goals or ambitions. And in many cases, haven't done the work to figure out how their goals and ambitions align with the courses that they should take. </p>
+<p>The BackPocket prototype should give the advisor the ability to review the student's up-to-date BackPocket assessments and reflections so that they can be better prepared to advise the student during their meeting(s). 
 
 
      
