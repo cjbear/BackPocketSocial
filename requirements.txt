@@ -72,7 +72,7 @@ python-editor==1.0.3
 python-form==0.2.2
 python-utils==2.3.0
 pytz==2018.4
-PyYAML==3.12
+PyYAML==5.4
 pyzmq==17.0.0
 redis==2.10.6
 requests==2.18.4
