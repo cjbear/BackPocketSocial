@@ -63,7 +63,7 @@ psycopg2==2.7.4
 psycopg2-binary==2.7.4
 pyCLI==2.0.3
 pycparser==2.18
-Pygments==2.2.0
+Pygments==2.7.4
 pylint==1.9.2
 PyMySQL==0.8.1
 python-dateutil==2.7.3
