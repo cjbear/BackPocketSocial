@@ -58,7 +58,7 @@ passlib==1.7.1
 picklable-itertools==0.1.1
 Pillow==5.1.0
 progressbar2==3.38.0
-protobuf==3.5.2.post1
+protobuf==3.18.3
 psycopg2==2.7.4
 psycopg2-binary==2.7.4
 pyCLI==2.0.3
